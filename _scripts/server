@@ -8,6 +8,6 @@
 set -e
 cd $(dirname "$0")/..
 
-_scripts/bootstrap && bundle exec foreman start -f .Procfile
+bundle exec foreman start -f .Procfile
 exit=$?
 exit $exit

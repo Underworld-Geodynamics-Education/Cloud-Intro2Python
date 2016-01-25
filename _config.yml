@@ -2,9 +2,12 @@
 
 # Title for every page
 
-title: Untitled Site
+title: Untitled Site Untitled Site Untitled Site
 
 # mathjax: false # Turn off if you really want to !
+
+logo: Logo.jpg
+logo_size: 200px
 
 # Navigation links for the yellow banner (v. short names are a good idea)
 
@@ -15,7 +18,8 @@ navigation:
     - url:  Example2.html
       name: Example 2
 
-# Site owner
+# Site owner / contact person
+
 owner:
   name: "Louis Moresi"
   # This list populates the page footer
@@ -29,12 +33,7 @@ owner:
       - url: tel:+61383441217
         description: office phone
 
-  email: louis.moresi@unimelb.edu.au
-  twitter: louismoresi
-  facebook: louismoresi
-  github: lmoresi
-  url: http://www.moresi.info
 
 include: [".htaccess", "_assets"]
 
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md", ".Procfile"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md", ".Procfile", "Dockerfile"]
