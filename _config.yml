@@ -1,0 +1,40 @@
+# Site wide configuration
+
+# Title for every page
+
+title: Untitled Site
+
+# mathjax: false # Turn off if you really want to !
+
+# Navigation links for the yellow banner (v. short names are a good idea)
+
+navigation:
+    - url:  Example1.html
+      name: Example
+
+    - url:  Example2.html
+      name: Example 2
+
+# Site owner
+owner:
+  name: "Louis Moresi"
+  # This list populates the page footer
+  contact_list:
+      - url: mailto:louis.moresi@unimelb.edu.au
+        description: email
+
+      - url: http://www.moresi.info
+        description: www.moresi.info
+
+      - url: tel:+61383441217
+        description: office phone
+
+  email: louis.moresi@unimelb.edu.au
+  twitter: louismoresi
+  facebook: louismoresi
+  github: lmoresi
+  url: http://www.moresi.info
+
+include: [".htaccess", "_assets"]
+
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md", ".Procfile"]
