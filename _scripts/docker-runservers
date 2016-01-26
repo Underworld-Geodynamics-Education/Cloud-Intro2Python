@@ -5,6 +5,10 @@
 
 cd /demonstration
 
+# Let these run in case we add content via the externally mounted VOLUME
+
 bundle exec jekyll build --watch &
 bundle exec compass watch &
-jupyter notebook --NotebookApp.default_url="/files/index.html" --NotebookApp.file_to_run="_site/index.html"
+
+# This is the notebook server
+jupyter notebook --no-browser --NotebookApp.default_url="/files/index.html" --NotebookApp.file_to_run="_site/index.html"
