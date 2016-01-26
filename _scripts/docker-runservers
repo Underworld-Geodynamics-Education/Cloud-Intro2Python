@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# Builds and watches the current directory
+# Starts a web server at the _site directory
 
 # Let these run in case we add content via the externally mounted VOLUME
 

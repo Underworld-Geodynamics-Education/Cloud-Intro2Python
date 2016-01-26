@@ -9,9 +9,9 @@ FROM lmoresi/unimelb-debian-base:v1.02
 RUN git clone https://github.com/lmoresi/docker-website-notebooks.git /demonstration/ # Watch the cache !
 
 
-## Add an external volume within the same mount point
+## Add an external volume which replaces the default content
 
-VOLUME /demonstration/Content/
+VOLUME /demonstration/Content
 
 ## Update the ruby dependencies and build the site
 
@@ -41,6 +41,6 @@ EXPOSE 8080
 ENTRYPOINT ["/usr/local/bin/tini", "--"]
 
 
-# CMD . _scripts/docker-runservers
+CMD _scripts/docker-runservers
 
-CMD jupyter notebook --port=8080 --ip=0.0.0.0 --no-browser --NotebookApp.default_url="/files/index.html" --NotebookApp.file_to_run="_site/index.html"
+#CMD jupyter notebook --port=8080 --ip=0.0.0.0 --no-browser --NotebookApp.default_url="/files/index.html" --NotebookApp.file_to_run="_site/index.html"
