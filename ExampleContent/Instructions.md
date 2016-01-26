@@ -1,10 +1,14 @@
 ---
 layout: home
-title: Example page
+title: Instructions - how to add your own content
 author: Louis Moresi
-description: Course notes
-permalink: Example2
+description:
+permalink: Instructions
 ---
+
+
+
+
 
 # Some example content
 

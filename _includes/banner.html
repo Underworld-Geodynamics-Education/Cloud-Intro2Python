@@ -11,7 +11,9 @@
           <span> Links:</span>
           {% for link in site.navigation %}
           <ul>
-            <li><a href="{{ link.url }}" class="button"> {{ link.name }} </a></li>
+            <li><a href="{{ link.url }}" class="button"
+                         {% unless link.url contains 'html' %} target="_blank" {% endunless %}>
+                         {{ link.name }} </a></li>
           </ul>
           {% endfor %}
       {% endif %}

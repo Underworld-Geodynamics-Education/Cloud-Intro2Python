@@ -2,7 +2,7 @@
 
 # Title for every page
 
-title: Untitled Site Untitled Site Untitled Site
+title: Literate Programming with Docker
 
 # mathjax: false # Turn off if you really want to !
 
@@ -11,19 +11,33 @@ logo_size: 200px
 
 # Navigation links for the yellow banner (v. short names are a good idea)
 
-navigation:
-    - url:  Example1.html
-      name: Example
+# Note: the links need to work within the 'jupyter notebook' filesystem which
+#       is a little different from the arrangements of the files on disk
+#       /files/X.yyy points to _site/X.yyy
+#       /notebooks/NBk/X.ipynb points to _site/NBk/X.ipynb but assumes the file is a runnable notebook
+#       /edit/dir/X.yyy brings up the file _site/dir/X.yyy in the text editor
 
-    - url:  Example2.html
-      name: Example 2
+navigation:
+    - url:  /files/Instructions.html
+      name: Guide
+
+    - url:  /files/WritingContent.html
+      name: Format
+
+    - url:  /notebooks/ExampleContent/Notebooks/StartHere.ipynb
+      name: Notebooks
+
+    - url:  /notebooks/ExampleContent/Notebooks/
+      name: File Browser
 
 # Site owner / contact person
 
 owner:
   name: "Louis Moresi"
+
   # This list populates the page footer
   contact_list:
+
       - url: mailto:louis.moresi@unimelb.edu.au
         description: email
 
