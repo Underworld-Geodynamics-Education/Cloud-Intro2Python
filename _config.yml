@@ -6,7 +6,7 @@ title: Literate Programming with Docker
 
 # mathjax: false # Turn off if you really want to !
 
-logo: Logo.jpg
+logo: /notebooks/Content/Logo.jpg
 logo_size: 200px
 
 # Navigation links for the yellow banner (v. short names are a good idea)
@@ -18,10 +18,10 @@ logo_size: 200px
 #       /edit/dir/X.yyy brings up the file _site/dir/X.yyy in the text editor
 
 navigation:
-    - url:  /files/Instructions.html
+    - url:  /files/Content/Instructions.html
       name: DIY
 
-    - url:  /files/WritingContent.html
+    - url:  /files/Content/WritingContent.html
       name: Format
 
     - url:  /notebooks/Content/Notebooks/StartHere.ipynb

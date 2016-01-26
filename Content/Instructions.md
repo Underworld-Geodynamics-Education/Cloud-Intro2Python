@@ -3,7 +3,6 @@ layout: home
 title: Instructions - how to add your own content
 author: Louis Moresi
 description:
-permalink: Instructions
 ---
 
 _This is the non-trivial part of the instruction manual ... using this template to make your content available to other people_

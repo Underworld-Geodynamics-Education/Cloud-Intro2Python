@@ -3,7 +3,6 @@ layout: home
 title: How to Write Content
 author: Louis Moresi
 description: How to Write Content
-permalink: WritingContent
 ---
 
 _The content of the web pages that are used for documentation is built from markdown using `jekyll` - a choice we make because it is can be deployed automatically on github webpages. Markdown is also the format used to write content for notebooks. Mathematics is included as latex using simple `mathjax` tags but this does require a live internet connection_
