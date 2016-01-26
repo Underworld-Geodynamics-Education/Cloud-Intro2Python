@@ -6,45 +6,8 @@ description:
 permalink: Instructions
 ---
 
+_This is the non-trivial part of the instruction manual ... using this template to make your content available to other people_
 
+# What is installed
 
-
-
-# Some example content
-
-Standard `markdown` will be converted to `html`
-
-We can also include mathematics using the
-
-\\[ \pi \\]
-
-\begin{equation}
-    \pi^2
-\end{equation}
-
-# This is level 1
-
-{% highlight latex %}
-    \frac{\partial {\bf u}}{\partial t}  +
-    \left( {{{\bf u}}. \nabla } \right){{\bf u}}   =
-    -\frac{1}{\rho }\nabla p  +  \textbf{F}  + \nu \nabla ^2{\bf u}
-{% endhighlight %}
-
-
-{% highlight python %}
-
-    # Here is some code
-    ## This is a comment
-
-    import underworld
-
-{% endhighlight %}
-
-
-What if this just goes on and on
-
-And on
-
-And on
-
-And on
+The unix environment you are working in depends on the setup of your Docker machine. This is determined from the `Dockerfile` in the home directory. The `FROM` command at the start of this file is the base image that is downloaded and used  

@@ -19,14 +19,23 @@ These characteristics of Docker allow us to create complex software bundles and 
 
 This is a demonstration of how to bundle python software into a Docker image and provide a simple user interface in the form of a static website and live jupyter notebooks.
 
+The web pages are built from a simple script that converts a small collection of markdown files (which is also used in the notebooks to format content) into web pages via templates. These templates make it easier to modify the content without damaging the pieces that interact with the `jupyter notebook` server.
+
+It should be possible to navigate freely between the web content and the live notebooks. In case you get lost in the notebooks, you can return to [this page](/) from the Jupyter logo.
+
+The links in the Navigation bar will take you to  
+
+   * [Home](/files/index.html) - this page
+   * [DIY](/files/Instructions.html) - explains how to build your own docker image and website   
+   * [Format](/files/WritingContent.html) - describes the markdown dialect, maths, code highlights and links
+   * [Notebooks](/notebooks/ExampleContent/Notebooks/StartHere.ipynb) - a sample notebook (can be linked to other notebooks)
+   * [Jupyter](/ExampleContent/Notebooks ) - the file browser and editor
 
 
-The static html is created from markdown using jekyll as this closely approximates the format used by the notebook's formatted cells
+# What is this for ?
 
+You can [fork this project on github](https://github.com/lmoresi/docker-website-notebooks#fork-destination-box) and use it to build your own docker image. I think you can use this template to make live manuals and courses for interactive content - especially when you need to control the installation and ensure a uniform environment for your users. In the classroom, perhaps, where you only need to install docker itself and then you can be sure your students will all see the same thing !
 
+# Getting help
 
-
-
-
-
-[This is a link](Example1.html) to another page
+I can't promise much help, but you can [contact me by email](mailto:louis.moresi@unimelb.edu.au)

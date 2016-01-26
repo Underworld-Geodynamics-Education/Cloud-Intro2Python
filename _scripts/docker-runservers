@@ -1,0 +1,10 @@
+#!/bin/sh
+#
+# Usage:
+#   _scripts/livebuilder
+
+cd /demonstration
+
+bundle exec jekyll build --watch &
+bundle exec compass watch &
+jupyter notebook --NotebookApp.default_url="/files/index.html" --NotebookApp.file_to_run="_site/index.html"

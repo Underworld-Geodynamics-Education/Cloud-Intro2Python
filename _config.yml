@@ -19,7 +19,7 @@ logo_size: 200px
 
 navigation:
     - url:  /files/Instructions.html
-      name: Guide
+      name: DIY
 
     - url:  /files/WritingContent.html
       name: Format
@@ -28,7 +28,7 @@ navigation:
       name: Notebooks
 
     - url:  /notebooks/ExampleContent/Notebooks/
-      name: File Browser
+      name: Jupyter
 
 # Site owner / contact person
 

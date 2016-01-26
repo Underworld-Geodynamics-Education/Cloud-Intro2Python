@@ -110,7 +110,7 @@ markup. For example:
 produces
 
 {% highlight latex %}
-% Navier Stokes equation 
+% Navier Stokes equation
 \frac{\partial {\bf u}}{\partial t}  +
 \left( {\bf u}. \nabla  \right) {\bf u}   =
 -\frac{1}{\rho } \nabla p  +  \textbf{F}  + \nu \nabla ^ 2 {\bf u}
@@ -143,3 +143,9 @@ print "Hello Underworld"
 
 
 # Some further reading
+
+### Links
+
+[Markdown Website](http://daringfireball.net/projects/markdown/)  
+[Mathjax Website](http://docs.mathjax.org)  
+[Jupyter Notebooks](http://www.jupyter.org)  
