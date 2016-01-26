@@ -7,5 +7,5 @@ cd /demonstration
 
 bundle install
 bundle exec jekyll build
-bundle exec compass
+bundle exec compass compile
 bundle exec jekyll build
