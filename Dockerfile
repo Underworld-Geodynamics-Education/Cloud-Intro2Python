@@ -19,6 +19,9 @@ WORKDIR $HOME
 
 RUN git clone https://github.com/lmoresi/docker-website-notebooks.git /demonstration/ # Watch the cache !
 
+RUN bundle install
+RUN _scripts/docker-site-builder
+
 # Make a scratch directory available to connect to the host machine.
 # Make the Notebook Resources directory available for extracting outputs etc
 # Should not be needed as I put a README there in the repo
