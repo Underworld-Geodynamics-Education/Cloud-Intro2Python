@@ -36,7 +36,7 @@ ENV USER=demon
 # but perhaps there is something else that would do this.
 
 WORKDIR /demonstration
-EXPOSE 8888
+EXPOSE 8080 
 ENTRYPOINT ["/usr/local/bin/tini", "--"]
 
 
