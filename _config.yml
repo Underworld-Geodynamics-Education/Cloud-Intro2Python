@@ -24,10 +24,10 @@ navigation:
     - url:  /files/WritingContent.html
       name: Format
 
-    - url:  /notebooks/ExampleContent/Notebooks/StartHere.ipynb
+    - url:  /notebooks/Content/Notebooks/StartHere.ipynb
       name: Notebooks
 
-    - url:  /notebooks/ExampleContent/Notebooks/
+    - url:  /notebooks/Content/Notebooks/
       name: Jupyter
 
 # Site owner / contact person
