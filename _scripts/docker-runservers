@@ -3,16 +3,18 @@
 # Builds and watches the current directory
 # Starts a web server at the _site directory
 
+set -e
+cd $(dirname "$0")/..
+
 # Let these run in case we add content via the externally mounted VOLUME
 
-bundle exec jekyll build --watch &
-bundle exec compass watch &
+# bundle exec jekyll build --watch &
+# bundle exec compass watch &
 
 # This is the notebook server
 
 # We want to start the server from the _site directory
-# where everything is being built
-# by the above commands.
+# where everything is being built by the above commands.
 
 cd _site
 
