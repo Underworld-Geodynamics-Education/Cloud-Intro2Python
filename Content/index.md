@@ -15,6 +15,8 @@ _This is a collection of tools to set up a web server in a docker container that
 
 These characteristics of Docker allow us to create complex software bundles and focus on the explanation of how they work, demonstrate the in-built algorithms, and provide tutorials that can be reused on new problems. We think this opens many doors for teaching basic computational methods as well as documenting technical software.
 
+Under Windows and Macintosh, you can use the [Kitematic gui](https://kitematic.com) to locate, download and run docker images. I'm assuming this is how you are viewing this content as the gui / plug-and-play aspect of docker and kitematic is the whole point !
+
 # What have we here ?
 
 This is a demonstration of how to bundle python software into a Docker image and provide a simple user interface in the form of a static website and live jupyter notebooks.
@@ -35,6 +37,8 @@ The links in the Navigation bar will take you to
 # What is this for ?
 
 You can [fork this project on github](https://github.com/lmoresi/docker-website-notebooks#fork-destination-box) and use it to build your own docker image. I think you can use this template to make live manuals and courses for interactive content - especially when you need to control the installation and ensure a uniform environment for your users. In the classroom, perhaps, where you only need to install docker itself and then you can be sure your students will all see the same thing !
+
+Another use for this project is as a mechanism for distributing code for review, snapshot a version of your code to distribute as part of a publication, or for the purposes of benchmarking.
 
 # Getting help
 

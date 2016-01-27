@@ -8,12 +8,9 @@ FROM lmoresi/unimelb-debian-base:v1.02
 
 RUN git clone https://github.com/lmoresi/docker-website-notebooks.git /demonstration/ # Watch the cache !
 
-
 ## Add an external volume which replaces the default content
-## and a place to build the site locally (which will capture any edited notebooks)
+## and a place to build the site locally (which will also capture any edited notebooks)
 
-VOLUME /demonstration/Content
-VOLUME /demonstration/_site/Content/Notebooks
 
 ## Update the ruby dependencies and build the site
 
@@ -33,6 +30,8 @@ ENV HOME=/demonstration
 ENV SHELL=/bin/bash
 ENV USER=demon
 
+VOLUME /demonstration/Content
+VOLUME /demonstration/_site
 
 # Launch the notebook server from the Notebook directory
 # The file_to_run option actually does nothing with the no-browser option ...
