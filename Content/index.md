@@ -27,11 +27,11 @@ It should be possible to navigate freely between the web content and the live no
 
 The links in the Navigation bar will take you to  
 
-   * [Home](/files/index.html) - this page
-   * [DIY](/files/Instructions.html) - explains how to build your own docker image and website   
-   * [Format](/files/WritingContent.html) - describes the markdown dialect, maths, code highlights and links
-   * [Notebooks](/notebooks/ExampleContent/Notebooks/StartHere.ipynb) - a sample notebook (can be linked to other notebooks)
-   * [Jupyter](/ExampleContent/Notebooks ) - the file browser and editor
+   * [Home](/files/Content/index.html) - this page
+   * [DIY](/files/Content/Instructions.html) - explains how to build your own docker image and website   
+   * [Format](/files/Content/WritingContent.html) - describes the markdown dialect, maths, code highlights and links
+   * [Notebooks](/notebooks/Content/Notebooks/StartHere.ipynb) - a sample notebook (can be linked to other notebooks)
+   * [Jupyter](/Content/Notebooks ) - the file browser and editor
 
 
 # What is this for ?
