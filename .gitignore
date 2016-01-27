@@ -3,4 +3,6 @@
 .bundle
 _site
 
-Gemfile.lock 
+Gemfile.lock
+
+.ipynb_checkpoints 

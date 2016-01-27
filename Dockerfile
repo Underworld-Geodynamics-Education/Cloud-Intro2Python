@@ -10,8 +10,10 @@ RUN git clone https://github.com/lmoresi/docker-website-notebooks.git /demonstra
 
 
 ## Add an external volume which replaces the default content
+## and a place to build the site locally (which will capture any edited notebooks)
 
 VOLUME /demonstration/Content
+VOLUME /demonstration/_site/Content/Notebooks
 
 ## Update the ruby dependencies and build the site
 
@@ -39,7 +41,6 @@ ENV USER=demon
 WORKDIR /demonstration
 EXPOSE 8080
 ENTRYPOINT ["/usr/local/bin/tini", "--"]
-
 
 CMD _scripts/docker-runservers
 
