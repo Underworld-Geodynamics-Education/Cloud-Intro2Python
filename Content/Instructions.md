@@ -24,7 +24,7 @@ The volumes within the container that can be used to exchange data are listed be
 
 You can start by pointing the `/demonstration/Content` VOLUME at a local copy of the original content grabbed from github.
 
-# What do I change and how ?
+# My Content !
 
 We use the [jupyter](www.jupyter.org) notebook system as the webserver. This is necessary because we want to mix live content with static content but docker means we don't really know our IP address or port - we have to make links entirely within the one server. This is not a big deal but does constrain how we structure the website and links.
 
@@ -37,7 +37,7 @@ There can be any number of other pages. If you want to make links to those pages
 
 The jupyter notebook server makes a distinction between files which are linked as `/files/Content` which are rendered directly by the webserver, and files which are linked `/notebooks/Content` which are rendered by the live notebook system. If the file is actually a notebook, then it is obvious why you should link `/notebooks/file.ipynb` but if it is an html file, for example, then `files/file.html` will show you a preview whereas `/notebooks/file.html` will open the source in an editor.
 
-## build the site
+## How to build it
 
 The repository contains all the scripts and style information to build a website from the content which it finds in the `Content` directory (actually `/demonstration/Content`). All the directories with names that start with `_` are part of that magic. To build the website run this command in the container's command line (in Kitematic, the execute button will start a shell for you)
 
@@ -51,9 +51,12 @@ You will need to view that site using the jupyter notebooks rather than a standa
 
 All of the material that creates the web pages and notebooks should live in the `Content` directory.
 
-The configuration is found one level up in `_config.yml` ... this should be fixed so it can be switched out along with the entire `Content` directory by using a different VOLUME
-
+Paths are mapped from the `Content` directory to the `_site` directory in an obvious way  (this can be subverted if you add `permalink` metadata to a file) which means that links can be written in a predictable manner. 
 
 ## Changing the Dockerfile
 
-The unix environment you are working in depends on the setup of your Docker machine. This is determined from the `Dockerfile` in the home directory. The `FROM` command at the start of this file is the base image that is downloaded and used  
+The unix environment you are working in depends on the setup of your Docker machine. This is determined from the `Dockerfile` in the home directory. The `FROM` command at the start of this file is the base image that is downloaded as the starting point. This contains all the dependencies you need to run live demonstrations (including the notebooks server, the jekyll system and so on).
+
+The Dockerfile in this repository builds upon the python installation and adds the web-building tools and the content.
+
+You will need to customise this !
