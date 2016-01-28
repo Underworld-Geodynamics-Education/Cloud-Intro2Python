@@ -24,13 +24,15 @@ The volumes within the container that can be used to exchange data are listed be
 
 You can start by pointing the `/demonstration/Content` VOLUME at a local copy of the original content grabbed from github.
 
-# My Content !
+# Background
 
 We use the [jupyter](www.jupyter.org) notebook system as the webserver. This is necessary because we want to mix live content with static content but docker means we don't really know our IP address or port - we have to make links entirely within the one server. This is not a big deal but does constrain how we structure the website and links.
 
 The site is built using [jekyll](http://jekyllrb.com) which combines a pile of markdown files plus stylesheets and produces an elegant, entirely static website. Jekyll is deployed by github to make websites from repositories that they host (and I use this for [www.moresi.info](http://www.moresi.info)). The plus side is that you need only think about markdown and not stylesheets but, of course there is a layer of additional logic and more to learn.
 
-Jekyll will take any markdown files it finds in the `/demonstration/Content` directory and render them into html files in the `/demonstration/_site/Content` directory. There must be some metadata provided at the top of these files (as in the examples). There is more data in the `_config.yml` file which is used to set paths, choose links for the navigation buttons, choose a logo image etc etc. Learn from the examples !
+# My Content !
+
+Jekyll will take any markdown files it finds in the `/demonstration/Content` directory and render them into html files in the `/demonstration/_site/Content` directory. There must be some metadata provided at the top of these files (as in the examples). There is more data in the `_config.yml` file which is used to set paths, choose links for the navigation buttons, choose a logo image etc etc. Learn from the examples and don't change anything until it is obvious what it does ! Any file or directory that starts with a `_` is either special or ignored by jekyll. Once you figure out how to change those files, you won't need to use this project at all !
 
 There must be an `index.md` file which will be the landing page for the website and the target of the **Home** button.
 There can be any number of other pages. If you want to make links to those pages from the notebooks or from the jekyll markdown files, then you need to make those links point to the html version of the file. For example, if you create a file  `/demonstration/Content/MyFiles/test.md` then you can write a link to this in markdown as `[my test file](/files/Content/MyFiles/test.html)`.
@@ -47,13 +49,15 @@ $ _scripts/docker-site-builder   #_ scripts are executable
 
 You will need to view that site using the jupyter notebooks rather than a standard server or directly from the filesystem as the paths are only valid within that environment.
 
-## Paths
+## Where to put it
 
 All of the material that creates the web pages and notebooks should live in the `Content` directory.
 
-Paths are mapped from the `Content` directory to the `_site` directory in an obvious way  (this can be subverted if you add `permalink` metadata to a file) which means that links can be written in a predictable manner. 
+Paths are mapped from the `Content` directory to the `_site` directory in an obvious way  (this can be subverted if you add `permalink` metadata to a file) which means that links can be written in a predictable manner.
 
-## Changing the Dockerfile
+Notebooks live in `Content/Notebooks` so that, by default, the navigation bar knows where to find them.
+
+# The Dockerfile
 
 The unix environment you are working in depends on the setup of your Docker machine. This is determined from the `Dockerfile` in the home directory. The `FROM` command at the start of this file is the base image that is downloaded as the starting point. This contains all the dependencies you need to run live demonstrations (including the notebooks server, the jekyll system and so on).
 

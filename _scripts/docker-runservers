@@ -6,7 +6,8 @@
 set -e
 cd $(dirname "$0")/..
 
-# Let these run in case we add content via the externally mounted VOLUME
+# Now that we have  symlink to the original content, we have to be careful that the
+# build scripts don't clean the _site directory when we are not expecting it.
 
 # bundle exec jekyll build --watch &
 # bundle exec compass watch &
