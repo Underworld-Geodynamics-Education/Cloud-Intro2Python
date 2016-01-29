@@ -17,18 +17,24 @@ logo_size: 200px
 #       /notebooks/NBk/X.ipynb points to _site/NBk/X.ipynb but assumes the file is a runnable notebook
 #       /edit/dir/X.yyy brings up the file _site/dir/X.yyy in the text editor
 
-navigation:
-    - url:  /files/Content/Instructions.html
-      name: DIY
 
-    - url:  /files/Content/WritingContent.html
-      name: Format
+##
+## Replace the DIY with a navigation/Index page ...
+##
+
+navigation:
+    - url:  /files/Content/Map.html
+      name: INDEX
 
     - url:  /notebooks/Content/Notebooks/StartHere.ipynb
       name: Notebooks
 
     - url:  /notebooks/Content/Notebooks/
       name: Jupyter
+
+    - url:  /terminals/1
+      name: Terminal
+
 
 # Site owner / contact person
 

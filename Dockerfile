@@ -16,9 +16,9 @@ RUN git clone https://github.com/lmoresi/docker-website-notebooks.git /demonstra
 
 WORKDIR /demonstration
 RUN bundle install
-RUN ls -l _scripts
 
-RUN . _scripts/docker-site-builder
+RUN ls -al
+RUN _scripts/docker-site-builder
 
 # Create a non-privileged user to run the notebooks and switch to this user for the server
 
