@@ -1,0 +1,15 @@
+# Deprecated ... we shouldn't need to do this
+
+
+#!/bin/sh
+#
+# Usage:
+#   _scripts/livebuilder
+
+set -e
+cd $(dirname "$0")/..
+
+bundle exec foreman start -f _scripts/.Procfile -d `pwd`
+
+exit=$?
+exit $exit
