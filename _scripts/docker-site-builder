@@ -12,4 +12,4 @@ bundle exec jekyll build
 
 # Now symlink Notebooks from the original location
 
-cd _site/Content && ln -s ../../Content/Notebooks/ Notebooks
+# cd _site/Content && ln -s ../../Content/Notebooks/ Notebooks
