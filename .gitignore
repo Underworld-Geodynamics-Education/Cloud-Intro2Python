@@ -7,6 +7,12 @@ Gemfile.lock
 
 .ipynb_checkpoints
 
+# Ignore any "Content" which is material linked or copied into place when this
+# module is used or the demo is fired up
+
+Content/
+_config.yml  
+
 Content/Notebooks/.ipynb_checkpoints/Example Working with on-demand mapping services-checkpoint.ipynb
 Content/Notebooks/LondonE18.png
 Content/Notebooks/ResolutionTest.png

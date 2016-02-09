@@ -2,6 +2,16 @@ FROM lmoresi/unimelb-debian-base:v1.03
 
 ## =============================================================
 ## base - image ... whatever functionality you want to provide !
+## This is my unix / python stuff (but it doesn't have underworld)
+##
+## This dockerfile builds an image from this content, and serves the
+## sample web pages and notebooks at port 8080
+##
+## docker run -p 8181:8080 --name="docker-web-notebooks-test" -t lmoresi/lmoresi/docker-web-notebooks-module
+## and then browse the docker VM ip address on port 8181 (for example)
+##
+## OR just use kitematic and click on the preview image
+##
 ## =============================================================
 
 ## Grab (this) content from github
@@ -12,14 +22,8 @@ RUN git clone https://github.com/lmoresi/docker-web-notebook-server.git /demonst
 ## If you don't have any content then use the example content !!
 
 WORKDIR /demonstration
-RUN ln -s ExampleContent/ Content/
-
-## I always link the _site/Content/Notebook directories back to their originals
-## (they are ignored by the build by default)
-## This means edits live in the original location and can be checked back in via git if needed
-
-RUN cd _site/Content 
-
+RUN ls -l
+RUN ln -s ExampleContent Content
 
 ## Update the ruby dependencies and build the site
 
