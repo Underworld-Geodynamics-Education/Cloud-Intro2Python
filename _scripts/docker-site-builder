@@ -9,7 +9,3 @@ cd $(dirname "$0")/..
 bundle exec jekyll build
 bundle exec compass compile
 bundle exec jekyll build
-
-# Now symlink Notebooks from the original location
-
-# cd _site/Content && ln -s ../../Content/Notebooks/ Notebooks
