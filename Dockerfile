@@ -22,8 +22,8 @@ RUN git clone https://github.com/lmoresi/docker-web-notebook-server.git /demonst
 ## If you don't have any content then use the example content !!
 
 WORKDIR /demonstration
-RUN ls -l
-RUN ln -s ExampleContent Content
+
+RUN _scripts/install-examples.sh
 
 ## Update the ruby dependencies and build the site
 
