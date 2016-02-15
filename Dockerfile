@@ -16,21 +16,32 @@ FROM lmoresi/unimelb-debian-base:v1.03
 
 ## Grab (this) content from github
 
-RUN git clone https://github.com/lmoresi/docker-web-notebook-server.git /demonstration/ # Watch the cache !
+# RUN git clone https://github.com/lmoresi/docker-web-notebook-server.git /demonstration/ # Watch the cache !
+
 
 ## Link your content to the "Content" directory at the root level of this module
 ## If you don't have any content then use the example content !!
 
+RUN mkdir /demonstration
 WORKDIR /demonstration
 
-RUN _scripts/install-examples.sh
+## These are the build templates etc
+ADD _scripts  _scripts
+ADD _layouts  _layouts
+ADD _includes _includes
+ADD _assets   _assets
+ADD Gemfile   Gemfile
+ADD config.rb config.rb
+
+## And this is the example content
+ADD ExampleContent Content
+ADD ExampleContent/_config.yml _config.yml
 
 ## Update the ruby dependencies and build the site
 
 RUN bundle install
 
-RUN ls -al
-RUN _scripts/docker-site-builder
+RUN ./_scripts/docker-site-builder
 
 # Create a non-privileged user to run the notebooks and switch to this user for the server
 
