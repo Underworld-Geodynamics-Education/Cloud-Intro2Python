@@ -48,3 +48,9 @@ ADD /etc /etc
 CMD ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]
 
 RUN nginx -t
+
+ADD www /var/www/src
+
+RUN apt-get install -y python-pip
+RUN pip install mkdocs
+RUN cd /var/www/src && mkdocs build -v -d /var/www/html
