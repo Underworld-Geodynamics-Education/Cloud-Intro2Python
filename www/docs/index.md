@@ -1,10 +1,3 @@
----
-layout: home
-title: Introduction
-description: Course notes
-# permalink: index.html   # make this the default home page which will be served at [link](/)
----
-
 _This is a collection of tools to set up a web server in a docker container that mixes static html content and dynamic "literate-programming" content via jupyter notebooks._
 
 # Introduction
