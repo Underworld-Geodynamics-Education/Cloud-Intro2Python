@@ -1,10 +1,3 @@
----
-layout: home
-title: Instructions - how to add your own content
-author: Louis Moresi
-description:
----
-
 _This is the non-trivial part of the instruction manual ... using this template to make your content available to other people_
 
 # Getting started
@@ -13,10 +6,8 @@ Ultimately you probably want to [fork this project](https://github.com/lmoresi/d
 
 As a first step, though, you can use the docker VOLUMEs to over-ride my content and also to capture the results of rebuilding the site and editing notebooks.
 
-When the container is running (in kitematic) it looks like this:      
-<figure>
-<img src="/files/Content/KitematicRunningThisContent.png" >
-</figure>
+When the container is running (in kitematic) it looks like this:
+![](KitematicRunningThisContent.png)
 
 Clicking on the preview brings up the web content in the default browser (by default _this content_ !).
 
