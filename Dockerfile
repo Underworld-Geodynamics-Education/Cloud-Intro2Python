@@ -35,8 +35,14 @@ ADD notebooks /home/researcher
 # Python 3 needs a non-ASCII locale to work properly with the "click" module
 ENV LC_ALL="C.UTF-8" LANG="C.UTF-8"
 
-# Install Python
-RUN apt-get install -y python3 python3-pip libzmq-dev libyaml-dev
+# Install
+# * Python 3
+# * SciPy dependencies
+# * Matplotlib dependencies
+RUN apt-get install -y \
+  python3 python3-pip libyaml-dev \
+  libblas-dev liblapack-dev libatlas-base-dev gfortran \
+  libpng-dev libfreetype6-dev libxft-dev
 
 # Install Jupyter
 RUN pip3 install jupyter ipython
@@ -66,3 +72,18 @@ RUN pip3 install --upgrade git+https://github.com/mitsuhiko/click.git && \
 
 # Build mkdocs documentation
 RUN cd /var/www/src && mkdocs build -v -d /var/www/html
+
+# Install some Python packages
+RUN apt-get install -y python3-numpy python3-scipy python3-matplotlib python3-gdal
+
+# Obspy stuff
+RUN apt-get install libxml2-dev libxslt1-dev libxslt1.1
+RUN pip3 install obspy
+
+# Cartopy stuff
+RUN apt-get install -y libproj-dev libgeos-dev
+# (Cython takes a while to install, so break it out)
+RUN pip3 install Cython
+RUN pip3 install shapely==1.5.12 cartopy Pillow
+
+
