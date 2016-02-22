@@ -29,28 +29,40 @@ RUN useradd -m researcher -s /bin/bash && \
   passwd -d researcher && passwd -u researcher && \
   rm ~researcher/.bashrc ~researcher/.bash_logout ~researcher/.profile
 
-ADD notebooks /home/researcher/notebooks
+# Add notebooks to use homedir
+ADD notebooks /home/researcher
+
+# Python 3 needs a non-ASCII locale to work properly with the "click" module
+ENV LC_ALL="C.UTF-8" LANG="C.UTF-8"
 
 # Install Python
-RUN apt-get install -y python3 python3-pip
+RUN apt-get install -y python3 python3-pip libzmq-dev libyaml-dev
 
 # Install Jupyter
-RUN sudo pip3 install jupyter ipython
+RUN pip3 install jupyter ipython
 
+# Remove default nginx configs, and change config so supervisord can run it
 RUN rm /etc/nginx/conf.d/*.conf && \
   sed -i '1s/^/daemon off;\n/' /etc/nginx/nginx.conf
 
+# Add Jupyter config so it starts under path "/jupyter"
 RUN su - researcher -c "mkdir -p ~/.jupyter && echo \"c.NotebookApp.base_url = '/jupyter'\" > ~/.jupyter/jupyter_notebook_config.py"
 
+# Copy etc configs, including nginx and supervisord
 ADD /etc /etc
 
 # Run all processes through supervisord
 CMD ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]
 
+# Test Nginx config
 RUN nginx -t
 
+# Copy source to compile for web pages
 ADD www /var/www/src
 
-RUN apt-get install -y python-pip
-RUN pip install mkdocs
+# Install latest (Python 3 bug-free) version of click, then mkdocs
+RUN pip3 install --upgrade git+https://github.com/mitsuhiko/click.git && \
+  pip3 install --upgrade mkdocs
+
+# Build mkdocs documentation
 RUN cd /var/www/src && mkdocs build -v -d /var/www/html
