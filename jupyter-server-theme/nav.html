@@ -38,6 +38,30 @@
             {% endif %}
             {% endfor %}
 
+            <!-- Additional navigation via mkdocs.yml / config -->
+
+            <ul class="nav navbar-nav">
+            {% for nav_item in config.extra.nav_links %}
+            {% if nav_item | length > 2 %}
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ nav_item[0] }} <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    {% for nav_item1 in nav_item[1:] %}
+                        <li >
+                            <a href="{{ nav_item1[1] }}">{{ nav_item1[0] }}</a>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                </li>
+            {% else %}
+                <li>
+                    <a href="{{ nav_item[1] }}">{{ nav_item[0] }}</a>
+                </li>
+            {% endif %}
+            {% endfor %}
+
+
+<!-- Hard links appropriate for notebooks - better to add these via extra data structure in the yml file
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Live Content <b class="caret"></b> </a>
                 <ul class="dropdown-menu">
@@ -51,9 +75,7 @@
                         <a href="/notebooks/docs"> Source Code </a>
                     </li>
                 </ul>
-            </li>
-
-
+            </li> -->
             </ul>
 
 
@@ -64,9 +86,6 @@
                         <i class="fa fa-search"></i> Search
                     </a>
                 </li>
-
-
-
 
                 {% if repo_url %}
                 <li>

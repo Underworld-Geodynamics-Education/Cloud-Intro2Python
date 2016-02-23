@@ -29,6 +29,7 @@ WORKDIR /demonstration
 
 ## These are the build templates etc
 ADD docs docs
+ADD jupyter-server-theme jupyter-server-theme
 ADD Notebooks Notebooks
 ADD scripts scripts
 ADD mkdocs.yml mkdocs.yml
