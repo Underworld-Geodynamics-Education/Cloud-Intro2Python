@@ -21,6 +21,11 @@ _Not everything interesting is found in the menu bar !_
    * <a href="/notebooks/Notebooks"> Jupyter </a> - the file browser / editor
    * <a href="/terminals/1"> Terminal </a> - a terminal running on the backend machine
 
+## Source Code
+
+   * <a href="/notebooks/docs/"> File browser (and editor !) </a>   
+   * <a href="/files/LICENCE"> Licence </a> 
+
 ## External
 
    * [Github Source](https://github.com/lmoresi/docker-website-notebooks)

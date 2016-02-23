@@ -22,26 +22,21 @@ FROM lmoresi/unimelb-debian-base:v1.03
 ## Link your content to the "Content" directory at the root level of this module
 ## If you don't have any content then use the example content !!
 
+RUN pip install mkdocs
+
 RUN mkdir /demonstration
 WORKDIR /demonstration
 
 ## These are the build templates etc
-ADD _scripts  _scripts
-ADD _layouts  _layouts
-ADD _includes _includes
-ADD _assets   _assets
-ADD Gemfile   Gemfile
-ADD config.rb config.rb
-
-## And this is the example content
-ADD ExampleContent Content
-ADD ExampleContent/_config.yml _config.yml
+ADD docs docs
+ADD Notebooks Notebooks
+ADD scripts scripts
+ADD mkdocs.yml mkdocs.yml
 
 ## Update the ruby dependencies and build the site
 
-RUN bundle install
 
-RUN ./_scripts/docker-site-builder
+RUN ./scripts/run-sitebuilder
 
 # Create a non-privileged user to run the notebooks and switch to this user for the server
 
@@ -53,18 +48,11 @@ ENV HOME=/demonstration
 ENV SHELL=/bin/bash
 ENV USER=demon
 
-## Add an external volume which can replace the default content
-## and a place to build the site locally (which will also capture any edited notebooks)
-
-VOLUME /demonstration/Content
-VOLUME /demonstration/_site
-
 # Launch the notebook server from the Notebook directory
-# The file_to_run option actually does nothing with the no-browser option ...
 # but perhaps there is something else that would do this.
 
 WORKDIR /demonstration
 EXPOSE 8080
 ENTRYPOINT ["/usr/local/bin/tini", "--"]
 
-CMD _scripts/docker-runservers
+CMD scripts/run-jupyter
