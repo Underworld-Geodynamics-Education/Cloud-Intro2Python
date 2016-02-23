@@ -24,17 +24,15 @@ It should be possible to navigate freely between the web content and the live no
 
 The links in the Navigation bar will take you to  
 
-   * [Home](/files/Content/index.html) - this page
-   * [Index](/files/Content/Map.html) - a list of pages / facilities
-   * [Notebooks](/notebooks/Content/Notebooks/StartHere.ipynb) - a sample notebook (can be linked to other notebooks)
-   * [Jupyter](/Content/Notebooks ) - the file browser and editor
-   * [Terminal](/terminals/1) - a terminal running on the backend machine
-
-
+   * [Home](index.md) - this page
+   * [Index](Map.md) - a list of pages / facilities
+   * <a href="/notebooks/Notebooks/StartHere.ipynb"> Example Notebook </a> a sample notebook
+   * <a href="/notebooks/Notebooks/"> Jupyter </a> - the file browswer and editor
+   * <a href="/terminals/1"> Terminal </a> - a terminal running on the backend machine
 
 # What is this for ?
 
-You can [fork this project on github](https://github.com/lmoresi/docker-website-notebooks#fork-destination-box) and use it to build your own docker image. I think you can use this template to make live manuals and courses for interactive content - especially when you need to control the installation and ensure a uniform environment for your users. In the classroom, perhaps, where you only need to install docker itself and then you can be sure your students will all see the same thing !
+You can [fork this project on github](https://github.com/lmoresi/notebook-web-template#fork-destination-box) and use it to build your own docker image. I think you can use this template to make live manuals and courses for interactive content - especially when you need to control the installation and ensure a uniform environment for your users. In the classroom, perhaps, where you only need to install docker itself and then you can be sure your students will all see the same thing !
 
 Another use for this project is as a mechanism for distributing code for review, snapshot a version of your code to distribute as part of a publication, or for the purposes of benchmarking.
 

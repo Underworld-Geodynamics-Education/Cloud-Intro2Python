@@ -4,14 +4,21 @@ site_dir: www
 
 # Layout of pages
 
-use_directory_urls: false
+use_directory_urls: False 
+include_next_prev: False
 
 # Theme
-theme: cosmo
-
+theme: mkdocs
 
 pages:
 - index.md
-- Map:
-    - 'Write' : 'WritingContent.md'
-    - 'Instructions' : 'Instructions.md'
+- Map.md
+- About:
+    - 'How to write a new page' : WritingContent.md
+    - 'Installation instructions' : Instructions.md
+
+# Mathematics
+
+extra_javascript:
+  - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+  - js/mathjax-local-config.js

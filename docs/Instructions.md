@@ -9,13 +9,13 @@ _This is the non-trivial part of the instruction manual ... using this template 
 
 # Getting started
 
-Ultimately you probably want to [fork this project](https://github.com/lmoresi/docker-website-notebooks), build a new docker image with your own software stack, and replace my content with something more relevant. The [docker website](https://www.docker.com/products/docker-toolbox) has many tutorials on learning how to become fluent with images / containers and you will have to visit there to grab a copy of the docker binaries.
+Ultimately you probably want to [fork this project](https://github.com/lmoresi/notebook-web-template), build a new docker image with your own software stack, and replace my content with something more relevant. The [docker website](https://www.docker.com/products/docker-toolbox) has many tutorials on learning how to become fluent with images / containers and you will have to visit there to grab a copy of the docker binaries.
 
 As a first step, though, you can use the docker VOLUMEs to over-ride my content and also to capture the results of rebuilding the site and editing notebooks.
 
 When the container is running (in kitematic) it looks like this:      
 <figure>
-<img src="/files/Content/KitematicRunningThisContent.png" >
+    <img src="/files/www/KitematicRunningThisContent.png" >
 </figure>
 
 Clicking on the preview brings up the web content in the default browser (by default _this content_ !).
@@ -28,7 +28,7 @@ You can start by pointing the `/demonstration/Content` VOLUME at a local copy of
 
 We use the [jupyter](www.jupyter.org) notebook system as the webserver. This is necessary because we want to mix live content with static content but docker means we don't really know our IP address or port - we have to make links entirely within the one server. This is not a big deal but does constrain how we structure the website and links.
 
-The site is built using [jekyll](http://jekyllrb.com) which combines a pile of markdown files plus stylesheets and produces an elegant, entirely static website. Jekyll is deployed by github to make websites from repositories that they host (and I use this for [www.moresi.info](http://www.moresi.info)). The plus side is that you need only think about markdown and not stylesheets but, of course there is a layer of additional logic and more to learn.
+The site is built using [mkdocs](http://) which combines a pile of markdown files plus stylesheets and produces an elegant, entirely static website. The plus side is that you need only think about markdown and not stylesheets but, of course there is a layer of additional logic and more to learn.
 
 # My Content !
 
