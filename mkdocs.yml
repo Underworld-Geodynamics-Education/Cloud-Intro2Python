@@ -2,6 +2,10 @@ site_name: Literate Programming and Documentation
 site_author: Louis Moresi
 site_dir: www
 
+# theme over-ride
+
+theme_dir: jupyter-server-theme
+
 # Layout of pages
 
 use_directory_urls: False
