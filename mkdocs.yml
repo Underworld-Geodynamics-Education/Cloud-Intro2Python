@@ -1,0 +1,17 @@
+site_name: Literate Programming and Documentation
+site_author: Louis Moresi
+site_dir: www
+
+# Layout of pages
+
+use_directory_urls: false
+
+# Theme
+theme: cosmo
+
+
+pages:
+- index.md
+- Map:
+    - 'Write' : 'WritingContent.md'
+    - 'Instructions' : 'Instructions.md'

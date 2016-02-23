@@ -1,10 +1,6 @@
 .DS_Store
-.sass-cache
-.bundle
 _site
 .ipynb_checkpoints
-Gemfile.lock
 
-
-Content
-_config.yml
+# Site build
+www
