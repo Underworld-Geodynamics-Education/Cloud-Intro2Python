@@ -17,9 +17,6 @@ theme: flatly
 pages:
 - index.md
 - Map.md
-- About:
-    - 'How to write a new page' : WritingContent.md
-    - 'Installation instructions' : Instructions.md
 
 # Mathematics
 
