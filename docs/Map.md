@@ -1,9 +1,3 @@
----
-title: Site Index
-description: Site Index
----
-
-_Not everything interesting is found in the menu bar !_
 
 ## Pages
 

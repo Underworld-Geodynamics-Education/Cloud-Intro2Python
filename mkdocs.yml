@@ -42,7 +42,7 @@ extra:
             ["Notebooks", "/notebooks/Notebooks" ],
             ["Terminal", "/terminals/1" ]
           ]
-        - [ "Source Code",
-            ["Local", "/notebooks/docs"],
-            ["Github", "https://github.com/lmoresi/notebook-web-template"]
+        - [ "Exercises",
+            ["1 - ", ""],
+            ["2 -", ""]
           ]
