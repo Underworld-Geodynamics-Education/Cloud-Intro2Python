@@ -1,6 +1,34 @@
-site_name: Literate Programming & Docker
+site_name: VIEPS introduction to python
 site_author: Louis Moresi
 site_dir: www
+
+pages:
+- Home: index.md
+- Site Map: Map.md
+- _404: 404.md
+
+## Here is how to add extra (external) links to the navigation bar
+##
+## 1) Add a link to the nav bar
+##     The item you add is a two-member list: ["Name for the link", "url"]
+## 2) Add a new menu item to the nav bar
+##     The item you add is a three-or-more-member list with a name for the menu item as the first member
+##     and subsequent entries being lists of names / urls as above:
+##     [ "Menu name", ["Menu item 1 name", "Menu item 1 url"], ["Menu item 2 name", "Menu item 2 url"], ... ]
+##
+
+extra:
+    nav_links:
+        - ["Live Content",
+            ["Notebooks", "/notebooks/Notebooks" ],
+            ["Terminal", "/terminals/1" ]
+          ]
+        - [ "Exercises",
+            ["1 - ", ""],
+            ["2 -", ""]
+          ]
+
+
 
 # theme over-ride
 
@@ -14,36 +42,8 @@ include_next_prev: False
 # Theme
 theme: flatly
 
-pages:
-- Home: index.md
-- Site Map: Map.md
-- _404: 404.md
-
 # Mathematics
 
 extra_javascript:
   - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
   - js/mathjax-local-config.js
-
-
-## Here is how to add extra (external) links to the navigation bar
-##
-## 1) Add a link to the nav bar
-##     The item you add is a two-member list: ["Name for the link", "url"]
-## 2) Add a new menu item to the nav bar
-##     The item you add is a three-or-more-member list with a name for the menu item as the first member
-##     and subsequent entries being lists of names / urls as above:
-##     [ "Menu name", ["Menu item 1 name", "Menu item 1 url"], ["Menu item 2 name", "Menu item 2 url"], ... ]
-##
-
-
-extra:
-    nav_links:
-        - ["Live Content",
-            ["Notebooks", "/notebooks/Notebooks" ],
-            ["Terminal", "/terminals/1" ]
-          ]
-        - [ "Exercises",
-            ["1 - ", ""],
-            ["2 -", ""]
-          ]
