@@ -9,4 +9,4 @@ cd $(dirname "$0")/..
 # We want to start the server from the _site directory
 # where everything was built by the docker-site-builder script
 
-jupyter notebook --port=8080 --ip=0.0.0.0 --no-browser --NotebookApp.default_url="/files/www/index.html"
+jupyter notebook --port=8899 --ip=0.0.0.0 --no-browser --NotebookApp.default_url="/files/www/index.html"
