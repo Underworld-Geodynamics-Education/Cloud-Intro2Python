@@ -15,8 +15,9 @@ include_next_prev: False
 theme: flatly
 
 pages:
-- index.md
-- Map.md
+- Home: index.md
+- Site Map: Map.md
+- _404: 404.md
 
 # Mathematics
 
