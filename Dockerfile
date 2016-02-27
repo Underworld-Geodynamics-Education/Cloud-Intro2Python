@@ -56,4 +56,4 @@ WORKDIR /demonstration
 EXPOSE 8080
 ENTRYPOINT ["/usr/local/bin/tini", "--"]
 
-CMD scripts/run-jupyter
+CMD scripts/run-jupyter -p 8080
