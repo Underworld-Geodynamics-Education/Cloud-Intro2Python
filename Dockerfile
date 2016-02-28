@@ -1,4 +1,4 @@
-FROM lmoresi/unimelb-debian-base:v1.03
+FROM lmoresi/unimelb-debian-base:v1.04
 
 ## =============================================================
 ## base - image ... whatever functionality you want to provide !
