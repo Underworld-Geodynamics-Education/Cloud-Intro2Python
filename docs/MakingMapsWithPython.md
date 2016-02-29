@@ -53,14 +53,7 @@ Finally, we take pieces of all these examples and build the map above.
 (You can read the article it came from in [SIAM news](https://sinews.siam.org/DetailsPage/tabid/607/ArticleID/685/Computational-Plate-Tectonics-and-the-Geological-Record-in-the-Continents.aspx) and see some other cartopy maps)
 
 
-
-
-
-
-
-
-
-
+---
 
 
 ### Help me !!

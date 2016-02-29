@@ -4,7 +4,10 @@ Site map for VIEPS INP course material
 ## Pages
 
    * [Home](index.md) - (also accessible through the `Jupyter` logo in notebooks)
-   * [Index](Map.md) - this site map !
+   * [Index](SiteMap.md) - this site map !
+   * [Maps with python](MakingMapsWithPython.md)  - Beautiful maps with the `cartopy` package
+   * [Maths with python](Mathing.md) - Interacting with equations without "solving" them
+   * [Assessment](Exercises.md) - Assessment and instructions
 
 ## Notebooks
 

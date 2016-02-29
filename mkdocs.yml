@@ -4,12 +4,11 @@ site_dir: www
 
 pages:
 - Home: index.md
-- Site Map: Map.md
+- Site Map: SiteMap.md
 - Course:
-    - Overview.md
-    - MakingMapsWithPython.md
-    - Mathing.md
-
+    - "1 - Map making": MakingMapsWithPython.md
+    - "2 - Exploring Equations": Mathing.md
+    - "Assessment": Exercises.md
 
 ## Here is how to add extra (external) links to the navigation bar
 ##
@@ -25,11 +24,13 @@ extra:
     nav_links:
         - ["Live Content",
             ["Notebooks", "/notebooks/Notebooks" ],
-            ["Terminal", "/terminals/1" ]
+            ["Terminal", "/terminals/1" ],
+            ["Console",  "/tree/Notebooks#running" ]
           ]
-        - [ "Exercises",
-            ["1 - ", ""],
-            ["2 -", ""]
+        - ["Assessment",
+            ["Assessment 1", "/notebooks/Notebooks/ForAssessment/Exercise1.ipybb"],
+            ["Assessment 2", "/notebooks/Notebooks/ForAssessment/Exercise2.ipynb"],
+            ["Assessment 3", "/notebooks/Notebooks/ForAssessment/Exercise3.ipynb"]
           ]
 
 
