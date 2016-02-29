@@ -5,6 +5,11 @@ site_dir: www
 pages:
 - Home: index.md
 - Site Map: Map.md
+- Course:
+    - Overview.md
+    - MakingMapsWithPython.md
+    - Mathing.md
+
 
 ## Here is how to add extra (external) links to the navigation bar
 ##
