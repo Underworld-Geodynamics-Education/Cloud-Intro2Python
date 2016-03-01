@@ -7,3 +7,4 @@ This course provides an introduction to simple procedural programming in python 
 
 * <a href="/notebooks/Notebooks/Mapping"> Mapping </a> - Notebooks for the Mapping tutorial
 * <a href="/notebooks/Notebooks/SolveMathProblems"> Mathing </a> - Learn not to be nervous of mathematics through python
+* <a href="/notebooks/Notebooks/ForAssessment"> Assessment </a> - Learn to be nervous again 

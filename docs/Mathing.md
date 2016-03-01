@@ -73,7 +73,8 @@ The heat flow equation is the same as the groundwater flow equation. In the next
 
 It also introduces a name: _finite differences_ which is the formal description of what we have been discussing already.
 
-- <a href="/notebooks/Notebooks/SolveMathProblems/2 - FiniteDifferences.ipynb" target="_blank"> <!--_ --> Notebook: Groundwater flow problem </a>
+- <a href="/notebooks/Notebooks/SolveMathProblems/2 - FiniteDifferences.ipynb" target="_blank"> <!--_ --> Notebook: Finite Differences </a>
+- <a href="/notebooks/Notebooks/SolveMathProblems/3 - AdvancedFiniteDifferences.ipynb" target="_blank"> <!--_ --> Notebook: Advanced / Applied Finite Differences </a>
 
 
 
