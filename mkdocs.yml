@@ -30,7 +30,9 @@ extra:
         - ["Assessment",
             ["Assessment 1", "/notebooks/Notebooks/ForAssessment/Exercise1.ipynb"],
             ["Assessment 2", "/notebooks/Notebooks/ForAssessment/Exercise2.ipynb"],
-            ["Assessment 3", "/notebooks/Notebooks/ForAssessment/Exercise3.ipynb"]
+            ["Assessment 3", "/notebooks/Notebooks/ForAssessment/Exercise3.ipynb"],
+            ["Assessment 4", "/notebooks/Notebooks/Numpy/GameOfLife.ipynb"],
+            ["Assessment 5", "/notebooks/Notebooks/Numpy/Seasonal_averages.ipynb"]
           ]
 
 

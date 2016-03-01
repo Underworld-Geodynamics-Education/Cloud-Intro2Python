@@ -21,6 +21,13 @@ In the second exercise, you need to plot ocean depth against ocean age. You have
 
 Go back to the groundwater flow exercise. You probably noticed we chose a pretty poor method for updating the pressure each time (we showed in the radioactive decay example that the method is unstable and goes crazy when the timestep gets large. It does so unpredictably too, so you may never know if the answer is good or bad). In exercise 3, you can fix this by implementing a stable method and trying to break it !
 
+   - <a href="/notebooks/Notebooks/Numpy/GameOfLife.ipynb" target="_blank"> <!--_ --> Notebook: Template for Exercise 4 </a>
+
+   - <a href="/notebooks/Notebooks/Numpy/Seasonal_averages.ipynb" target="_blank"> <!--_ --> Notebook: Template for Exercise 5 </a>
+
+These two exercises challenge you to use `numpy` to full effect.
+
+
 ## Quid Pro Quo
 
 The idea of this course is to open up the possibilities of `python` for you to use on your own research problems. If you have a pertinent question from your own research that you can frame in a notebook then you can ask us for advice - but only if you send it in with your other assessments !

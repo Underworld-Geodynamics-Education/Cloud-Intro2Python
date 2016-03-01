@@ -13,7 +13,7 @@ Site map for VIEPS INP course material
 
    * <a href="/notebooks/Notebooks/Mapping"> Mapping </a> - Notebooks for the Mapping tutorial
    * <a href="/notebooks/Notebooks/SolveMathProblems"> Mathing </a> - Learn not to be nervous of mathematics through python
-   * <a href="/notebooks/Notebooks/Numpy"> Excercises </a> - set in the [Python Introduction Lessons](https://dansand.gitbooks.io/python/content/)
+   * <a href="/notebooks/Notebooks/Numpy"> Numpy Exercises </a> - set in the [Python Introduction Lessons](https://dansand.gitbooks.io/python/content/)
 
 ## Other
 
