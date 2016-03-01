@@ -18,6 +18,8 @@ Site map for VIEPS INP course material
 
    * <a href="/notebooks/Notebooks/"> Jupyter </a> - the file browser / editor
    * <a href="/terminals/1"> Terminal </a> - a terminal running a shell
+   * <a href="/tree/Notebooks#running"> Console </a> - manage runaway notebooks !
+
 
 ## External
    * [VIEPS website](http://www.vieps.org.au)

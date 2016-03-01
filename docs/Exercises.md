@@ -21,6 +21,13 @@ In the second exercise, you need to plot ocean depth against ocean age. You have
 
 Go back to the groundwater flow exercise. You probably noticed we chose a pretty poor method for updating the pressure each time (we showed in the radioactive decay example that the method is unstable and goes crazy when the timestep gets large. It does so unpredictably too, so you may never know if the answer is good or bad). In exercise 3, you can fix this by implementing a stable method and trying to break it !
 
+## Quid Pro Quo
+
+The idea of this course is to open up the possibilities of `python` for you to use on your own research problems. If you have a pertinent question from your own research that you can frame in a notebook then you can ask us for advice - but only if you send it in with your other assessments !
+
+(LM & DS)
+
+
 ---    
 
 ## Help me !!
