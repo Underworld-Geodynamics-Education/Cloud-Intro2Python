@@ -7,3 +7,4 @@ This course provides an introduction to simple procedural programming in python 
 
 * <a href="/notebooks/Notebooks/Mapping"> Mapping </a> - Notebooks for the Mapping tutorial
 * <a href="/notebooks/Notebooks/SolveMathProblems"> Mathing </a> - Learn not to be nervous of mathematics through python
+* [Python Introduction Lessons](https://dansand.gitbooks.io/python/content/) - Day 1 and 2 of the course.
