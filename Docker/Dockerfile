@@ -1,4 +1,4 @@
-FROM lmoresi/unimelb-debian-base:v1.04
+FROM lmoresi/unimelb-debian-python:1.05
 
 ## =============================================================
 ## base - image ... whatever functionality you want to provide !
@@ -22,7 +22,7 @@ FROM lmoresi/unimelb-debian-base:v1.04
 ## Link your content to the "Content" directory at the root level of this module
 ## If you don't have any content then use the example content !!
 
-RUN pip install mkdocs
+RUN pip install mkdocs mkdocs-bootswatch
 
 RUN mkdir /demonstration
 WORKDIR /demonstration
@@ -31,13 +31,14 @@ WORKDIR /demonstration
 ADD docs docs
 ADD jupyter-server-theme jupyter-server-theme
 ADD Notebooks Notebooks
+ADD Data Data
+ADD Documentation Documentation
 ADD scripts scripts
 ADD mkdocs.yml mkdocs.yml
 
 ## Update the ruby dependencies and build the site
 
-
-RUN ./scripts/run-sitebuilder
+RUN ./scripts/run-sitebuilder.py
 
 # Create a non-privileged user to run the notebooks and switch to this user for the server
 
@@ -52,8 +53,12 @@ ENV USER=demon
 # Launch the notebook server from the Notebook directory
 # but perhaps there is something else that would do this.
 
-WORKDIR /demonstration
+# Persistent / Shared space outside the container
+VOLUME /demonstration/Data/Resources
+VOLUME /demonstration/build
+
+
 EXPOSE 8080
 ENTRYPOINT ["/usr/local/bin/tini", "--"]
 
-CMD scripts/run-jupyter -p 8080
+CMD scripts/run-jupyter.py 

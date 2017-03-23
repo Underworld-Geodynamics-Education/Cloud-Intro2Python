@@ -3,8 +3,18 @@ _site
 .ipynb_checkpoints
 
 # Site build
+
 www
+www1
+www2
+www3
+www4
+www5
+www6
+www7
+www8
+build
 
 Notebooks/Mapping/GlobalAgeMapEq.png
-
 Notebooks/Mapping/ItaliaEq.png
+docs/Notebooks
