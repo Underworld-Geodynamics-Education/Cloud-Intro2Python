@@ -20,28 +20,29 @@ Why not python ?
 
 Introduction to docker, what / why and how to use it later
 
-Introduction to jupyter notebooks. Why they are useful and the workflow.
+Introduction to jupyter notebooks. Why they are useful and the workflow. (OK)
 
-Introduction to iPython
+Introduction to iPython (OK)
 
   - help
   - tab completion
   - function tooltips (etc)
   - shell commands and other "magic"
 
-Modules - how to import and use them (recap !)
+Modules - how to import and use them (recap !)  ()
 
   - Modules are available for everything
   - Too many to teach you about everything
   - I am more interested in showing you how to get used to the python style and not be afraid to keep looking stuff up.
 
-Data structures in python
+Data structures in python ()
   - numbers
   - strings
   - tuples, lists
   - sets, dictionaries
   - ? general container types (ordered lists etc)
   - ? Arrays, matrices etc
+  - ? classes
 
 Numpy - what does numpy do and what is it for ?
 
@@ -52,22 +53,38 @@ Numpy - what does numpy do and what is it for ?
 
 ### Day 2
 
+Matplotlib
 
+Plotting data
 
+Plotting image data
+
+Game of life example - numpy version and image plotting.
+
+Iteration / looping and storing data to plot later.
+
+(e.g. plot radio active decay solution v. finite difference solution)
+
+Fitting a curve to data using `scipy interpolate`
 
 ### Day 3
 
+Maps !!
 
-
+(That will take all day)
 
 ### Day 4
 
-TBA based on student interest
+Grids, triangles on the surface of the Earth.
+
+AND TBA based on student interest
 
 
 ### Day 5
 
 TBA getting started on projects
+
+OR Sympy ?
 
 
 ### Things to add
@@ -90,7 +107,7 @@ Documentation area
   - stripy
   - litho1pt0
 
-?? Pygplates ?? 
+?? Pygplates ??
 
 
 ### Assessment Exercises

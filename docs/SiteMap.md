@@ -8,6 +8,7 @@ Site map for VIEPS INP course material
    * [Maps with python](MakingMapsWithPython.md)  - Beautiful maps with the `cartopy` package
    * [Maths with python](Mathing.md) - Interacting with equations without "solving" them
    * [Assessment](Exercises.md) - Assessment and instructions
+   * [Help](HelpMe.md) - Links to documentation and useful information
 
 ## Notebooks
 
@@ -25,8 +26,5 @@ Site map for VIEPS INP course material
 ## External
    * [VIEPS website](http://www.vieps.org.au)
    * INP  [handbook entry](https://handbook.unimelb.edu.au/view/2016/COMP90059)
-   * [Python Introduction Lessons](https://dansand.gitbooks.io/python/content/)
-   * [RezBaz for help with digital]research(http://melbourne.resbaz.edu.au/)
    * [Louis Moresi's Home Page](http://www.moresi.info)
    * [email Louis Moresi](mailto:Louis.Moresi@unimelb.edu.au)
-   * [email Dan Sandiford](mailto:d.sandiford@student.unimelb.edu.au)
