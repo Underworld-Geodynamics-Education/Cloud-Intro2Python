@@ -5,10 +5,22 @@ This course provides an introduction to simple procedural programming in python 
 
 ## Course Content
 
-* <a href="/notebooks/Notebooks/Mapping"> Mapping </a> - Notebooks for the Mapping tutorial
-* <a href="/notebooks/Notebooks/SolveMathProblems"> Mathing </a> - Learn not to be nervous of mathematics through python
-* <a href="/notebooks/Notebooks/ForAssessment"> Assessment </a> - Learn to be nervous again
+* <a href="/notebooks/Notebooks/Introduction"> Introduction </a> - Getting Started with Notebooks, iPython and jupyter
 
+* <a href="/notebooks/Notebooks/Numpy+Scipy"> Numpy / Scipy </a> - Array operations, vectors, matrices with numpy and an introduction to
+some of the tools available through scipy
+
+* <a href="/notebooks/Notebooks/Plotting"> Plotting </a> - Making plots - mainly with Matplotlib.
+
+* <a href="/notebooks/Notebooks/Mapping"> Mapping </a> - Notebooks for the Mapping tutorial
+
+<!--
+ <a href="/notebooks/Notebooks/SolveMathProblems"> Mathing </a> - Learn not to be nervous of mathematics through python
+ <a href="/notebooks/Notebooks/ForAssessment"> Assessment </a> - Learn to be nervous again
+-->
+
+<!--
 ## Part I (gitbook)
 
 * [Python Introduction Lessons](https://dansand.gitbooks.io/python/content/) - Day 1 and 2 of the course.
+-->

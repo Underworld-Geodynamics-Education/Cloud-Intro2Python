@@ -20,7 +20,7 @@ call("jupyter nbextension enable exercise/main", shell=True)
 # where everything was built by the docker-site-builder script
 
 dir      = "www"
-password = "vieps-pye-1"
+password = "vieps-pye-0"
 port     = 8080
 call( "cd {:s} && nohup jupyter notebook --port={:d} --ip=0.0.0.0 --no-browser\
        --NotebookApp.token={:s} --NotebookApp.default_url=/files/index.html &".format(dir, port, password), shell=True )

@@ -60,6 +60,5 @@ Finally, we take pieces of all these examples and build the map above.
 
    * [Louis Moresi's Home Page](http://www.moresi.info)
    * [email Louis Moresi](mailto:Louis.Moresi@unimelb.edu.au)
-   * [email Dan Sandiford](mailto:d.sandiford@student.unimelb.edu.au)
    * [`cartopy` home page](http://scitools.org.uk/cartopy/)
    * [`basemap` home page](http://matplotlib.org/basemap/)

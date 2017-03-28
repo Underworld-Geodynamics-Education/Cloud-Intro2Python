@@ -25,6 +25,7 @@ print "Building {:s}".format(siteDir)
 call("cd {:s} && mkdocs build --theme united --clean".format(sitePath), shell=True)
 call("ln -s {:s}/Data/ {:s}".format(sitePath, siteDir), shell=True)
 call("ln -s {:s}/Notebooks/ {:s}".format(sitePath, siteDir), shell=True)
+call("ln -s {:s}/Documentation/ {:s}".format(sitePath, siteDir), shell=True)
 
 
 userList = [ str(i) for i in range(1,9) ]
@@ -34,4 +35,5 @@ for user in userList:
     print "Building {:s}".format(siteDir)
     call("cd {:s} && mkdocs build --site-dir {:s}".format(sitePath, siteDir), shell=True)
     call("ln -s {:s}/Data/ {:s}".format(sitePath, siteDir), shell=True)
+    call("ln -s {:s}/Documentation/ {:s}".format(sitePath, siteDir), shell=True)
     call("cp -r {:s}/Notebooks {:s}/Notebooks".format(sitePath,siteDir), shell=True)  # Hey ! should using os.path.join !!

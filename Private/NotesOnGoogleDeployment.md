@@ -64,3 +64,11 @@ otherwise these things get created quietly somewhere in the `/var/docker` area.
 That might be OK as it would be persistent, but not helpful for backup etc.
 
 ### Usage
+
+The root instance is the user logging in via
+
+
+
+#### Passwords
+
+Pretty obvious, but can be changed in the

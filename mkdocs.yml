@@ -6,9 +6,17 @@ pages:
 - Home: index.md
 - Site Map: SiteMap.md
 - Course:
-    - "1 - Map making": MakingMapsWithPython.md
-    - "2 - Exploring Equations": Mathing.md
-    - "Assessment": Exercises.md
+    - "1 - Introduction": Introduction.md
+    - "2 - Numpy + Scipy": NumpyScipy.md
+    - "3 - Matplotlib": Plotting.md
+    - "4 - Map making": MakingMapsWithPython.md
+#    - "2 - Exploring Equations": Mathing.md
+#    - "Assessment": Exercises.md
+- Help:
+    - HelpMe.md
+# Other:
+#     - Exercises.md
+#     - Mathing.md
 
 ## Here is how to add extra (external) links to the navigation bar
 ##
@@ -27,13 +35,15 @@ extra:
             ["Terminal", "/terminals/1" ],
             ["Console",  "/tree/Notebooks#running" ]
           ]
-        - ["Assessment",
-            ["Assessment 1", "/notebooks/Notebooks/ForAssessment/Exercise1.ipynb"],
-            ["Assessment 2", "/notebooks/Notebooks/ForAssessment/Exercise2.ipynb"],
-            ["Assessment 3", "/notebooks/Notebooks/ForAssessment/Exercise3.ipynb"],
-            ["Assessment 4", "/notebooks/Notebooks/Numpy/GameOfLife.ipynb"],
-            ["Assessment 5", "/notebooks/Notebooks/Numpy/Seasonal_averages.ipynb"]
-          ]
+        - "Help": HelpMe.md
+
+        # - ["Assessment",
+        #     ["Assessment 1", "/notebooks/Notebooks/ForAssessment/Exercise1.ipynb"],
+        #     ["Assessment 2", "/notebooks/Notebooks/ForAssessment/Exercise2.ipynb"],
+        #     ["Assessment 3", "/notebooks/Notebooks/ForAssessment/Exercise3.ipynb"],
+        #     ["Assessment 4", "/notebooks/Notebooks/Numpy/GameOfLife.ipynb"],
+        #     ["Assessment 5", "/notebooks/Notebooks/Numpy/Seasonal_averages.ipynb"]
+        #   ]
 
 
 

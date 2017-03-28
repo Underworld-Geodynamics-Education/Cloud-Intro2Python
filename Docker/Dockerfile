@@ -28,13 +28,13 @@ RUN mkdir /demonstration
 WORKDIR /demonstration
 
 ## These are the build templates etc
-ADD docs docs
-ADD jupyter-server-theme jupyter-server-theme
-ADD Notebooks Notebooks
 ADD Data Data
-ADD Documentation Documentation
-ADD scripts scripts
 ADD mkdocs.yml mkdocs.yml
+ADD jupyter-server-theme jupyter-server-theme
+ADD scripts scripts
+ADD Documentation Documentation
+ADD Notebooks Notebooks
+ADD docs docs
 
 ## Update the ruby dependencies and build the site
 
@@ -61,4 +61,4 @@ VOLUME /demonstration/build
 EXPOSE 8080
 ENTRYPOINT ["/usr/local/bin/tini", "--"]
 
-CMD scripts/run-jupyter.py 
+CMD scripts/run-jupyter.py
