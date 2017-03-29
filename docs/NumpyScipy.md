@@ -10,12 +10,14 @@ These notebooks are to get us started with numpy.
 
 # scipy
 
-  - <a href="/notebooks/Notebooks/Numpy+Scipy/4 - Introduction to Scipy.ipynb" target="_blank"> <!--_--> Notebook: an intro to scipy </a>
-  - <a href="/notebooks/Notebooks/Numpy+Scipy/5 - Scipy Interpolate.ipynb" target="_blank"> <!--_--> Notebook: an intro to scipy </a>
-  - <a href="/notebooks/Notebooks/Numpy+Scipy/6 - Scipy Spatial and Meshing.ipynb" target="_blank"> <!--_--> Notebook: scipy.spatial for triangulations etc</a>
-  - <a href="/notebooks/Notebooks/Numpy+Scipy/7 - Scipy Optimize.ipynb" target="_blank"> <!--_--> Notebook: scipy.optimize for curve fits etc </a>
-  - <a href="/notebooks/Notebooks/Numpy+Scipy/8 - Scipy Signal.ipynb" target="_blank"> <!--_--> Notebook: scipy.signal </a>
+  - <a href="/notebooks/Notebooks/Numpy+Scipy/4 - Introduction to Scipy.ipynb" target="_blank"> <!--_--> Notebook: an intro to `scipy` </a>
+  - <a href="/notebooks/Notebooks/Numpy+Scipy/5 - Scipy Interpolate.ipynb" target="_blank"> <!--_--> Notebook: an intro to `scipy` </a>
+  - <a href="/notebooks/Notebooks/Numpy+Scipy/6 - Scipy Spatial and Meshing.ipynb" target="_blank"> <!--_--> Notebook: `scipy.spatial` for triangulations etc</a>
+  - <a href="/notebooks/Notebooks/Numpy+Scipy/7 - Scipy Optimize.ipynb" target="_blank"> <!--_--> Notebook: `scipy.optimize` for curve fits etc </a>
+<!--
+  - <a href="/notebooks/Notebooks/Numpy+Scipy/8 - Scipy Signal.ipynb" target="_blank"> <!--_-- > Notebook: `scipy.signal` and `scipy.fft`</a>
+  -->
 
 # miscellaneous
 
-  - <a href="/notebooks/Notebooks/Numpy+Scipy/9 - Numpy, Scipy Miscellany.ipynb" target="_blank"> <!--_--> Notebook: miscellany </a>
+  - <a href="/notebooks/Notebooks/Numpy+Scipy/8 - Numpy, Scipy Miscellany.ipynb" target="_blank"> <!--_--> Notebook: miscellany </a>

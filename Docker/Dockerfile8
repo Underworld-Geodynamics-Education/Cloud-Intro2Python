@@ -28,7 +28,7 @@ RUN mkdir /demonstration
 WORKDIR /demonstration
 
 ## These are the build templates etc
-ADD Data Data
+ADD Data/Reference Data/Reference
 ADD mkdocs.yml mkdocs.yml
 ADD jupyter-server-theme jupyter-server-theme
 ADD scripts scripts
@@ -36,7 +36,7 @@ ADD Documentation Documentation
 ADD Notebooks Notebooks
 ADD docs docs
 
-## Update the ruby dependencies and build the site
+## Build the site (will also clean it out)
 
 RUN ./scripts/run-sitebuilder8.py
 
