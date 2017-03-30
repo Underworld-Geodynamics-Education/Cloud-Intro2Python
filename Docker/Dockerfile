@@ -29,6 +29,7 @@ WORKDIR /demonstration
 
 ## These are the build templates etc
 ADD Data/Reference Data/Reference
+ADD Data/Modules python_modules
 ADD mkdocs.yml mkdocs.yml
 ADD jupyter-server-theme jupyter-server-theme
 ADD scripts scripts
@@ -37,6 +38,23 @@ ADD Notebooks Notebooks
 ADD docs docs
 
 ## Update the ruby dependencies and build the site
+
+RUN cd python_modules && \
+       tar -xzf litho1pt0.tar.gz && \
+       tar -xzf stripy.tar.gz && \
+       cd ..
+
+RUN cd python_modules/litho1pt0 && \
+       python setup.py build && \
+       python setup.py install && \
+       cd ../..
+
+RUN cd python_modules/stripy && \
+      python setup.py build && \
+      python setup.py install && \
+      cd ../..
+
+
 
 RUN ./scripts/run-sitebuilder.py
 

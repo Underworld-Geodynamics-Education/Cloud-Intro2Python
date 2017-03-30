@@ -29,6 +29,7 @@ WORKDIR /demonstration
 
 ## These are the build templates etc
 ADD Data/Reference Data/Reference
+ADD Data/Modules python_modules
 ADD mkdocs.yml mkdocs.yml
 ADD jupyter-server-theme jupyter-server-theme
 ADD scripts scripts
