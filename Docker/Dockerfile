@@ -37,7 +37,7 @@ ADD Documentation Documentation
 ADD Notebooks Notebooks
 ADD docs docs
 
-## Update the ruby dependencies and build the site
+# Stripy / Litho1pt0
 
 RUN cd python_modules && \
        tar -xzf litho1pt0.tar.gz && \
@@ -54,7 +54,7 @@ RUN cd python_modules/stripy && \
       python setup.py install && \
       cd ../..
 
-
+## Update / build the site
 
 RUN ./scripts/run-sitebuilder.py
 

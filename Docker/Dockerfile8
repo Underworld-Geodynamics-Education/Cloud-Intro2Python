@@ -16,9 +16,6 @@ FROM lmoresi/unimelb-debian-python:1.05
 
 ## Grab (this) content from github
 
-# RUN git clone https://github.com/lmoresi/docker-web-notebook-server.git /demonstration/ # Watch the cache !
-
-
 ## Link your content to the "Content" directory at the root level of this module
 ## If you don't have any content then use the example content !!
 
@@ -37,7 +34,25 @@ ADD Documentation Documentation
 ADD Notebooks Notebooks
 ADD docs docs
 
+# Stripy / Litho1pt0
+
+RUN cd python_modules && \
+       tar -xzf litho1pt0.tar.gz && \
+       tar -xzf stripy.tar.gz && \
+       cd ..
+
+RUN cd python_modules/litho1pt0 && \
+       python setup.py build && \
+       python setup.py install && \
+       cd ../..
+
+RUN cd python_modules/stripy && \
+      python setup.py build && \
+      python setup.py install && \
+      cd ../..
+
 ## Build the site (will also clean it out)
+
 
 RUN ./scripts/run-sitebuilder8.py
 

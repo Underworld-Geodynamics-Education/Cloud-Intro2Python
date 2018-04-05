@@ -85,6 +85,7 @@ RUN pip install \
               ipython
 
 RUN pip install \
+            pyproj \
             shapely==1.5.12 \
             obspy \
             seaborn \
