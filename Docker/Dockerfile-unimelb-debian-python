@@ -2,6 +2,8 @@ FROM debian:jessie
 
 # Should lock that down to a specific version !
 
+ENV VERSION 1.05
+
 MAINTAINER Louis Moresi
 
 ## the update is fine but very slow ... keep it separated so it doesn't
@@ -35,6 +37,19 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     libscalapack-mpi-dev \
     libhdf5-serial-dev \
     libnetcdf-dev \
+    libfreetype6-dev \
+    libpng12-dev \
+    libtiff-dev \
+    libxft-dev \
+    xvfb \
+    freeglut3 \
+    freeglut3-dev \
+    libgl1-mesa-dri \
+    libgl1-mesa-glx \
+    libavcodec-dev \
+    libavformat-dev \
+    libavutil-dev \
+    libswscale-dev \
     gfortran \
     cython \
     libfreetype6-dev \
@@ -50,11 +65,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
 # I'm putting this here as it takes time and ought to be cached before the
 # more ephemeral parts of this image.
 
-RUN pip install matplotlib numpy scipy --upgrade
-
-#
-# These ones are needed for cartopy / imaging / geometry stuff
-#
 
 # (proj4 is buggered up everywhere in apt-get ... so build a known-to-work version from source)
 #
@@ -77,16 +87,26 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
 ## The recent netcdf4 / pythonlibrary stuff doesn't work properly with the default search paths etc
 ## here is a fix which builds the repo version. Hoping that pip install or apt-get install will work again soon
 
-RUN USE_SETUPCFG=0 HDF5_INCDIR=/usr/include/hdf5/serial HDF5_LIBDIR=/usr/lib/x86_64-linux-gnu/hdf5/serial pip install git+https://github.com/Unidata/netcdf4-python
+# RUN USE_SETUPCFG=0 HDF5_INCDIR=/usr/include/hdf5/serial HDF5_LIBDIR=/usr/lib/x86_64-linux-gnu/hdf5/serial pip install git+https://github.com/Unidata/netcdf4-python
+
+RUN pip install --upgrade pip && \
+    pip install matplotlib numpy scipy --upgrade && \
+    pip install --upgrade pyproj && \
+    pip install --upgrade netcdf4
+
+#
+# These ones are needed for cartopy / imaging / geometry stuff
+#
 
 RUN pip install \
               appdirs packaging \
               runipy \
               ipython
 
-RUN pip install \
+RUN pip install --no-binary :all: shapely
+
+RUN pip install  \
             pyproj \
-            shapely==1.5.12 \
             obspy \
             seaborn \
             pandas \
@@ -96,10 +116,13 @@ RUN pip install \
 
 # pip version won't run with required proj4 version
 
-RUN git clone https://github.com/SciTools/cartopy.git && \
-    cd cartopy && \
-    python setup.py build && \
-    python setup.py install
+#RUN git clone https://github.com/SciTools/cartopy.git && \
+#    cd cartopy && \
+#    python setup.py build && \
+#    python setup.py install
+
+
+RUN pip install --upgrade cartopy
 
 RUN jupyter contrib nbextension install --system && \
     jupyter nbextensions_configurator enable --system

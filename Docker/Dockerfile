@@ -1,4 +1,4 @@
-FROM lmoresi/unimelb-debian-python:1.05
+FROM lmoresi/unimelb-debian-python:1.0.6
 
 ## =============================================================
 ## base - image ... whatever functionality you want to provide !
@@ -14,69 +14,59 @@ FROM lmoresi/unimelb-debian-python:1.05
 ##
 ## =============================================================
 
-## Grab (this) content from github
 
-# RUN git clone https://github.com/lmoresi/docker-web-notebook-server.git /demonstration/ # Watch the cache !
+RUN pip install mkdocs mkdocs-bootswatch \
+                stripy \
+                litho1pt0
+
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+                xauth
+
+## These break the current installation of lavavu so we simply remove them
+
+RUN DEBIAN_FRONTEND=noninteractive apt-get remove -y --no-install-recommends \
+    libavcodec-dev \
+    libavformat-dev \
+    libavutil-dev
+
+RUN pip install lavavu
 
 
-## Link your content to the "Content" directory at the root level of this module
-## If you don't have any content then use the example content !!
+# script for xvfb-run.  all docker commands will effectively run under this via the entrypoint
+RUN printf "#\041/bin/sh \n rm -f /tmp/.X99-lock && xvfb-run -s '-screen 0 1600x1200x16' \$@" >> /usr/local/bin/xvfbrun.sh && \
+                    chmod +x /usr/local/bin/xvfbrun.sh
 
-RUN pip install mkdocs mkdocs-bootswatch
 
-RUN mkdir /demonstration
-WORKDIR /demonstration
+RUN useradd --create-home --home-dir /home/jovyan --shell /bin/bash --user-group jovyan
+WORKDIR  /home/jovyan
+USER jovyan
 
 ## These are the build templates etc
-ADD Data/Reference Data/Reference
-ADD Data/Modules python_modules
-ADD mkdocs.yml mkdocs.yml
-ADD jupyter-server-theme jupyter-server-theme
-ADD scripts scripts
-ADD Documentation Documentation
-ADD Notebooks Notebooks
-ADD docs docs
-
-# Stripy / Litho1pt0
-
-RUN cd python_modules && \
-       tar -xzf litho1pt0.tar.gz && \
-       tar -xzf stripy.tar.gz && \
-       cd ..
-
-RUN cd python_modules/litho1pt0 && \
-       python setup.py build && \
-       python setup.py install && \
-       cd ../..
-
-RUN cd python_modules/stripy && \
-      python setup.py build && \
-      python setup.py install && \
-      cd ../..
+ADD --chown=jovyan:jovyan  Data/Reference Data/Reference
+ADD --chown=jovyan:jovyan  Data/Resources Data/Resources
+ADD --chown=jovyan:jovyan  mkdocs.yml mkdocs.yml
+ADD --chown=jovyan:jovyan  jupyter-server-theme jupyter-server-theme
+ADD --chown=jovyan:jovyan  scripts scripts
+ADD --chown=jovyan:jovyan  Documentation Documentation
+ADD --chown=jovyan:jovyan  Notebooks Notebooks
+ADD --chown=jovyan:jovyan  docs docs
 
 ## Update / build the site
-
 RUN ./scripts/run-sitebuilder.py
 
-# Create a non-privileged user to run the notebooks and switch to this user for the server
+# Trust all notebooks
+# RUN find -name \*.ipynb  -print0 | xargs -0 jupyter trust
 
-RUN useradd --create-home --home-dir /home/demon --shell /bin/bash --user-group demon
-RUN chown -R demon:demon /demonstration
-
-USER demon
-ENV HOME=/demonstration
-ENV SHELL=/bin/bash
-ENV USER=demon
-
-# Launch the notebook server from the Notebook directory
-# but perhaps there is something else that would do this.
 
 # Persistent / Shared space outside the container
-VOLUME /demonstration/Data/Resources
-VOLUME /demonstration/build
+VOLUME /home/jovyan/Data/Resources
+VOLUME /home/jovyan/build
 
 
-EXPOSE 8080
-ENTRYPOINT ["/usr/local/bin/tini", "--"]
+# expose notebook port and server port
+EXPOSE 8080 9999
+
+# note we use xvfb which to mimic the X display for lavavu
+ENTRYPOINT ["/usr/local/bin/tini", "--", "xvfbrun.sh"]
 
 CMD scripts/run-jupyter.py

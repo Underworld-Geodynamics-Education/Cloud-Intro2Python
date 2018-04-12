@@ -10,16 +10,20 @@ version which is optimised / extended for programming.
 
 ## `python` language
 
-  - [LINK]()
-  - [Stackoverflow]()
+Google is probably your best friend in this section and, when you do a google search, the
+stack overflow pages are often the most helpful ones to home in on.
 
-## numpy
+  - [Python resources list](https://www.fullstackpython.com/best-python-resources.html)
+  - [Stackoverflow](https://stackoverflow.com/questions/tagged/python)
 
-  - <a href="/files/Documentation/numpy-user-1.12.0.pdf"> PDF user manual </a>
+## numpy & scipy
 
-## scipy
+The pdf version of the `numpy` manual is on this system (numpy doesn't change much from version to version
+but you might see some small variations). Likewise the `scipy` manual but here you might find it helpful to access
+the inbuilt help commands in a notebook to double check.
 
-  - <a href="/files/Documentation/scipy-ref-0.19.0.pdf"> PDF user manual </a>
+  - <a href="/files/Documentation/numpy-user-1.12.0.pdf"> numpy: PDF user manual </a>
+  - <a href="/files/Documentation/scipy-ref-0.19.0.pdf"> scipy: PDF user manual </a>
 
 
 ## matplotlib
@@ -32,9 +36,14 @@ The matplotlib documentation tends to be very technical and deals with the under
 
   - <a href="/files/Documentation/Matplotlib-user-2.0.0.pdf"> PDF user manual </a>
 
-
 ## cartopy
 
   - [`cartopy` home page](http://scitools.org.uk/cartopy/)
   - [`basemap` home page](http://matplotlib.org/basemap/)
   - ['cartopy gallery'](http://scitools.org.uk/cartopy/docs/v0.15/gallery.html)
+
+## stripy
+
+There is no user manual other than the examples and that is because we wrote this package recently and have still to do a manual.
+On the other hand, you can always ask. The underlying algorithms themselves are in ancient fortran code that we wrapped in python and
+made friendly. The papers for this are listed in the examples.

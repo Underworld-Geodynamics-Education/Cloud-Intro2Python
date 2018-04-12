@@ -9,9 +9,10 @@ pages:
     - "1 - Introduction": Introduction.md
     - "2 - Numpy + Scipy": NumpyScipy.md
     - "3 - Matplotlib": Plotting.md
-    - "4 - Map making": MakingMapsWithPython.md
-#    - "2 - Exploring Equations": Mathing.md
-#    - "Assessment": Exercises.md
+    - "4 - Mapping": MakingMapsWithPython.md
+    - "5 - Mathing": Mathing.md
+    - "6 - Meshing": Meshing.md
+    - "Assessment": Exercises.md
 - Help:
     - HelpMe.md
 # Other:

@@ -14,7 +14,7 @@ Why python ?
 
 Why not python ?
   - slow / interpreted language
-  - fussy about minor things, relaxed about imporant things (!)
+  - fussy about minor things, relaxed about important things (!)
     - e.g. whitespace
     - e.g. variable types
 

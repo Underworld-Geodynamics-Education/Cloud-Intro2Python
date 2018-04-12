@@ -9,5 +9,5 @@
 set -e
 cd $(dirname "$0")/..
 
-docker build -t lmoresi/docker-vieps-pye:2017 -f Docker/Dockerfile  .
-docker build -t lmoresi/docker-vieps-pye-8user:2017 -f Docker/Dockerfile8  .
+docker build -t lmoresi/docker-vieps-pye:2018.1 -f Docker/Dockerfile  .
+docker build -t lmoresi/docker-vieps-pye-8user:2018.1 -f Docker/Dockerfile8  .

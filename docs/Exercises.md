@@ -34,7 +34,7 @@ These two exercises challenge you to use `numpy` to full effect.
 
 The idea of this course is to open up the possibilities of `python` for you to use on your own research problems. If you have a pertinent question from your own research that you can frame in a notebook then you can ask us for advice - but only if you send it in with your other assessments !
 
-(LM & DS)
+(LM)
 
 
 ---    
@@ -43,4 +43,3 @@ The idea of this course is to open up the possibilities of `python` for you to u
 
    * [Louis Moresi's Home Page](http://www.moresi.info)
    * [email Louis Moresi](mailto:Louis.Moresi@unimelb.edu.au)
-   * [email Dan Sandiford](mailto:d.sandiford@student.unimelb.edu.au)

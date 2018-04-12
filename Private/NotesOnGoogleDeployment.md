@@ -30,7 +30,7 @@ it is necessary to set permissions carefully when adding volumes to user-accessi
 
   2. Add other ports to the http firewall using this (via gcloud console):
 ``` sh
-      gcloud compute firewall-rules update default-allow-http --allow=tcp:80,tcp:8080-8090
+      gcloud compute firewall-rules update default-allow-http --allow=tcp:80,tcp:8080-8092
       # did it work ?
       gcloud compute firewall-rules list
 ```
@@ -43,7 +43,7 @@ it is necessary to set permissions carefully when adding volumes to user-accessi
 
   4. Run the container with the following command:
 ```sh
-nohup docker run -p 8080:8080 -p 8081:8081 -p 8082:8082 -p 8083:8083 -p 8084:8084 -p 8085:8085 -p 8086:8086 -p 8087:8087 -p 8088:8088 -v /home/louis_moresi/vieps_data:/demonstration/Data/Resources -v /home/louis_moresi/vieps_users:/demonstration/build lmoresi/docker-vieps-pye-8user:2017 &
+nohup docker run --name vieps-pye -p 8080:8080 -p 8081:8081 -p 8082:8082 -p 8083:8083 -p 8084:8084 -p 8085:8085 -p 8086:8086 -p 8087:8087 -p 8088:8088 -p 8089:8089 -p 8090:8090 -p 8091:8091 -p 8092:8092  -v /home/louis_moresi/vieps_data:/home/jovyan/Data/Resources -v /home/louis_moresi/vieps_users:/home/jovyan/build lmoresi/docker-vieps-pye-8user:2018.1 &
 ```
   5. exit the shell using `^D` to ensure that the process continues to run in the background
 

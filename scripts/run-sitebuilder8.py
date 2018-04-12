@@ -28,7 +28,7 @@ call("ln -s {:s}/Notebooks/ {:s}".format(sitePath, siteDir), shell=True)
 call("ln -s {:s}/Documentation/ {:s}".format(sitePath, siteDir), shell=True)
 
 
-userList = [ str(i) for i in range(1,9) ]
+userList = [ str(i) for i in range(1,13) ]
 
 for user in userList:
     siteDir = os.path.join(sitePath,"build","www"+user)
@@ -37,3 +37,5 @@ for user in userList:
     call("ln -s {:s}/Data/ {:s}".format(sitePath, siteDir), shell=True)
     call("ln -s {:s}/Documentation/ {:s}".format(sitePath, siteDir), shell=True)
     call("cp -r {:s}/Notebooks {:s}/Notebooks".format(sitePath,siteDir), shell=True)  # Hey ! should using os.path.join !!
+
+call("find -name \*.ipynb  -print0 | xargs -0 jupyter trust", shell=True)

@@ -26,14 +26,18 @@ users   = { "www"       : ["vieps-pye-boss", 8080 ],
             "build/www5": ["vieps-pye-5",    8085 ],
             "build/www6": ["vieps-pye-6",    8086 ],
             "build/www7": ["vieps-pye-7",    8087 ],
-            "build/www8": ["vieps-pye-8",    8088 ] }
+            "build/www8": ["vieps-pye-8",    8088 ],
+            "build/www9": ["vieps-pye-9",    8089 ],
+            "build/www10": ["vieps-pye-10",  8090 ],
+            "build/www11": ["vieps-pye-11",  8091 ],
+            "build/www12": ["vieps-pye-12",  8092 ] }
 
 # Maybe we need to quote the password in case it has odd characters in it
 
 for dir in users.keys():
     password = users[dir][0]
     port     = users[dir][1]
-    call( "cd {:s} && nohup jupyter notebook --port={:d} --ip=0.0.0.0 --no-browser\
+    call( "cd {:s} && nohup jupyter notebook --port={:d} --ip='*' --no-browser\
            --NotebookApp.token={:s} --NotebookApp.default_url=/files/index.html &".format(dir, port, password), shell=True )
 
 # Don't exit

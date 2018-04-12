@@ -10,7 +10,6 @@ Optimised for a Docker environment.
 mkdocs.yml
 
 - Data:
-  - Modules:    python modules packaged for installation (not available via pip)
   - Reference:  sample datasets that are stored locally
   - Resources:  scratch space - ignored by docker
 
