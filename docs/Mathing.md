@@ -24,11 +24,11 @@ The solution to this equation is
         \label{eq:decaysolution}
 \end{equation}
 
-where \\(\theta_0\\) is the amount of the radioactive material remaining.
+where $\theta_0$ is the amount of the radioactive material remaining.
 The same equation also describes the cooling of, say, a cup of coffee. In this
-case we interpret \\(\theta \\) as the excess temperature (above room temperature).
+case we interpret $\theta$ as the excess temperature (above room temperature).
 
-**We can prove that this is a solution to the equation by substituting the solution (\\(\ref{eq:decaysolution}\\)) into the original equation (\\(\ref{eq:decay} \\))**
+**We can prove that this is a solution to the equation by substituting the solution $(\ref{eq:decaysolution})$ into the original equation $(\ref{eq:decay}$ )**
 
 ### Think Again !
 

@@ -15,7 +15,7 @@ FROM lmoresi/unimelb-debian-python:1.0.6
 ## =============================================================
 
 
-RUN pip install mkdocs mkdocs-bootswatch \
+RUN pip install mkdocs mkdocs-bootswatch pymdown-extensions\
                 stripy \
                 litho1pt0
 

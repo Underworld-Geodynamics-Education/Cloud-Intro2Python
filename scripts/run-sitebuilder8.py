@@ -38,4 +38,4 @@ for user in userList:
     call("ln -s {:s}/Documentation/ {:s}".format(sitePath, siteDir), shell=True)
     call("cp -r {:s}/Notebooks {:s}/Notebooks".format(sitePath,siteDir), shell=True)  # Hey ! should using os.path.join !!
 
-call("find -name \*.ipynb  -print0 | xargs -0 jupyter trust", shell=True)
+call("find . -name \*.ipynb  -print0 | xargs -0 jupyter trust", shell=True)

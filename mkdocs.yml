@@ -62,6 +62,13 @@ theme: flatly
 
 # Mathematics
 
+markdown_extensions:
+   # other extensions ...
+   - pymdownx.arithmatex
+
+# other settings ...
+
 extra_javascript:
-  - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+  # other extra java script
   - js/mathjax-local-config.js
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML

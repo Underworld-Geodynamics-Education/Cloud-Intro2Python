@@ -47,7 +47,7 @@ nohup docker run --name vieps-pye -p 8080:8080 -p 8081:8081 -p 8082:8082 -p 8083
 ```
   5. exit the shell using `^D` to ensure that the process continues to run in the background
 
-  6. Log into the root instance of the site (`http:?.?.?.?:8080`) and use the `jupyter` terminal to rebuild the site (the external directories will have been overlain by mounting the persistent volumes)
+  6. Log into the root instance of the site (`http:?.?.?.?:8080`) and use the `jupyter` terminal to rebuild the site (the external directories will have been overlain by mounting the persistent volumes). Back up this data if the image has been in use before.
 
   7. Do any other site maintenance / preparation such as caching data via the root instance. This will change the master copies of notebooks and can be propagated out via the `scripts/run-sitebuilder8.py` command.
 
@@ -56,8 +56,8 @@ nohup docker run --name vieps-pye -p 8080:8080 -p 8081:8081 -p 8082:8082 -p 8083
 Volumes exposed in the image are:
 
 ``` sh
-  /demonstration/Data/Resources
-  /demonstration/build
+  /home/jovyan/Data/Resources
+  /home/jovyan/build
 ```
 We need to use absolute paths in the `docker run` command
 otherwise these things get created quietly somewhere in the `/var/docker` area.
@@ -65,10 +65,8 @@ That might be OK as it would be persistent, but not helpful for backup etc.
 
 ### Usage
 
-The root instance is the user logging in via
-
-
+The root instance is the user logging in via the 8080 port
 
 #### Passwords
 
-Pretty obvious, but can be changed in the
+Pretty obvious, but can be changed in the run-jupyter scripts.
