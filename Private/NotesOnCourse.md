@@ -1,5 +1,11 @@
 ## Notes
 
+General - an introduction to programming projects - formalising the approach to programming
+tasks (spelling out requirements, designing an algorithm, debugging, testing and checking).
+
+
+
+
 ### Day 1
 
 Overview of the course content - Hands on nature of the course
@@ -75,7 +81,7 @@ Maps !!
 
 ### Day 4
 
-Grids, triangles on the surface of the Earth.
+Grids, triangles on the surface of the Earth. Triangulations 
 
 AND TBA based on student interest
 
@@ -107,7 +113,6 @@ Documentation area
   - stripy
   - litho1pt0
 
-?? Pygplates ??
 
 
 ### Assessment Exercises

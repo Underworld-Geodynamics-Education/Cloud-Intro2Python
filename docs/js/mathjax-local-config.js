@@ -32,7 +32,7 @@
       displayMath: [ ["\\[","\\]"] ]
     },
     TeX: {
-      TagSide: "right",
+      TagSide: "left",
       TagIndent: "1cm",
       MultLineWidth: "85%",
       equationNumbers: {
