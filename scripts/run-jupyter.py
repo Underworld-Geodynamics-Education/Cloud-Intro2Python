@@ -10,8 +10,8 @@ import time
 # Make sure jupyter defaults are correct (globally)
 
 call("jupyter nbextension enable hide_input/main", shell=True)
-call("jupyter nbextension enable rubberband/main", shell=True)
-call("jupyter nbextension enable exercise/main", shell=True)
+# call("jupyter nbextension enable rubberband/main", shell=True)
+# call("jupyter nbextension enable exercise/main", shell=True)
 
 # We want to start the server from the _site directory
 # where everything was built by the docker-site-builder script

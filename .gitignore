@@ -15,14 +15,8 @@ www7
 www8
 build
 
-Notebooks/Mapping/GlobalAgeMapEq.png
-Notebooks/Mapping/ItaliaEq.png
 docs/Notebooks
 
-Notebooks/ScatteredData+Triangulation/CompareAS.png
-
-Notebooks/Mapping/LondonE18.png
-
-Notebooks/Mapping/PlateMotionsMollweide.png
-
-Notebooks/Mapping/ResolutionTest.png
+Notebooks/ScatteredData+Triangulation/*.png
+Notebooks/Mapping/*.png
+Notebooks/Mapping/*.jpg
