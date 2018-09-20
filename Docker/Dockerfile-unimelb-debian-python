@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:stretch
 
 # Should lock that down to a specific version !
 
@@ -38,7 +38,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     libhdf5-serial-dev \
     libnetcdf-dev \
     libfreetype6-dev \
-    libpng12-dev \
+    libpng-dev \
     libtiff-dev \
     libxft-dev \
     xvfb \
@@ -90,6 +90,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
 # RUN USE_SETUPCFG=0 HDF5_INCDIR=/usr/include/hdf5/serial HDF5_LIBDIR=/usr/lib/x86_64-linux-gnu/hdf5/serial pip install git+https://github.com/Unidata/netcdf4-python
 
 RUN pip install --upgrade pip
+RUN pip install --upgrade setuptools
 # RUN pip install --upgrade  matplotlib numpy scipy
 RUN pip install --upgrade pyproj
 # RUN pip install --upgrade netcdf4
