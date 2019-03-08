@@ -28,9 +28,4 @@ mkdocs.yml
 - build:
 
 
-```python
-
-import quagmire
-print("Hello world")
-
-```
+https://mybinder.org/v2/gh/University-of-Melbourne-Geodynamics/UoM-VIEPS-Intro-to-Python.git/master
