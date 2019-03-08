@@ -26,8 +26,8 @@ FROM lmoresi/lmoresi-debian-python:1.0.8
 
 
 # script for xvfb-run.  all docker commands will effectively run under this via the entrypoint
-RUN printf "#\041/bin/sh \n rm -f /tmp/.X99-lock && xvfb-run -s '-screen 0 1600x1200x16' \$@" >> /usr/local/bin/xvfbrun.sh && \
-                    chmod +x /usr/local/bin/xvfbrun.sh
+# RUN printf "#\041/bin/sh \n rm -f /tmp/.X99-lock && xvfb-run -s '-screen 0 1600x1200x16' \$@" >> /usr/local/bin/xvfbrun.sh && \
+#                     chmod +x /usr/local/bin/xvfbrun.sh
 
 
 # RUN useradd --create-home --home-dir /home/jovyan --shell /bin/bash --user-group jovyan || true
@@ -38,6 +38,8 @@ USER jovyan
 ADD --chown=jovyan:jovyan  CourseContent/Data/Reference Data/Reference
 ADD --chown=jovyan:jovyan  CourseContent/Data/Resources Data/Resources
 ADD --chown=jovyan:jovyan  CourseContent/Notebooks Notebooks
+ADD --chown=jovyan:jovyan  Docker/jupyter_notebook_config.py .jupyter/jupyter_notebook_config.py
+
 
 ## Update / build the site
 # RUN ./scripts/run-sitebuilder.py
@@ -53,6 +55,7 @@ VOLUME /home/jovyan/build
 
 # expose notebook port and server port
 EXPOSE 8888
+
 
 # note we use xvfb which to mimic the X display for lavavu
 ENTRYPOINT []
