@@ -1,0 +1,9 @@
+FROM lmoresi/docker-vieps-pye:2019.1
+
+
+
+# expose notebook port and server port
+# EXPOSE 8888
+
+# note we use xvfb which to mimic the X display for lavavu
+# ENTRYPOINT ["jupyter", "lab","--ip=0.0.0.0","--allow-root", "--NotebookApp.token=''"]

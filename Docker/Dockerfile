@@ -35,14 +35,9 @@ WORKDIR  /home/jovyan
 USER jovyan
 
 ## These are the build templates etc
-ADD --chown=jovyan:jovyan  Data/Reference Data/Reference
-ADD --chown=jovyan:jovyan  Data/Resources Data/Resources
-# ADD --chown=jovyan:jovyan  mkdocs.yml mkdocs.yml
-# ADD --chown=jovyan:jovyan  jupyter-server-theme jupyter-server-theme
-# ADD --chown=jovyan:jovyan  scripts scripts
-# ADD --chown=jovyan:jovyan  Documentation Documentation
-ADD --chown=jovyan:jovyan  Notebooks Notebooks
-# ADD --chown=jovyan:jovyan  docs docs
+ADD --chown=jovyan:jovyan  CourseContent/Data/Reference Data/Reference
+ADD --chown=jovyan:jovyan  CourseContent/Data/Resources Data/Resources
+ADD --chown=jovyan:jovyan  CourseContent/Notebooks Notebooks
 
 ## Update / build the site
 # RUN ./scripts/run-sitebuilder.py

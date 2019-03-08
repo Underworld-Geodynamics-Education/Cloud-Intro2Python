@@ -143,3 +143,4 @@ EXPOSE 8888
 ENV TINI_VERSION v0.8.4
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /usr/local/bin/tini
 RUN chmod +x /usr/local/bin/tini
+ENV PATH /usr/local/bin:${PATH}
