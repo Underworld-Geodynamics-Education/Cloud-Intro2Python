@@ -24,4 +24,13 @@ mkdocs.yml
 - scripts: Build scripts (can be run within the container to build or maintain it)
 
 - www:
+
 - build:
+
+
+```python
+
+import quagmire
+print("Hello world")
+
+```
