@@ -7,14 +7,14 @@
 
 # Private Parts
 
-Private/*
+CourseContent/Private/*
 
 # Built - if made locally
 
 www/*
 build/*
-Data/Resources/*
-
+CourseContent/Data/Resources/*
+CourseContent/pre-2018/*
 #  Git
 
 .git

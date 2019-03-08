@@ -1,7 +1,6 @@
 FROM lmoresi/docker-vieps-pye:2019.1
 
 
-
 # expose notebook port and server port
 # EXPOSE 8888
 

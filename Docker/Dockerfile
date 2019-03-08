@@ -55,4 +55,5 @@ VOLUME /home/jovyan/build
 EXPOSE 8888
 
 # note we use xvfb which to mimic the X display for lavavu
-ENTRYPOINT ["jupyter", "lab","--ip=0.0.0.0","--allow-root", "--NotebookApp.token=''"]
+ENTRYPOINT []
+CMD ["jupyter", "lab","--ip=0.0.0.0","--allow-root", "--NotebookApp.token=''"]
