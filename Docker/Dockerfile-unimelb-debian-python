@@ -1,4 +1,5 @@
-FROM debian:stretch-20190228-slim
+FROM jupyterhub/singleuser:0.9.4
+
 ENV VERSION 1.08
 MAINTAINER Louis Moresi
 
@@ -40,9 +41,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     freeglut3-dev \
     libgl1-mesa-dri \
     libgl1-mesa-glx \
-    libavcodec-dev \
-    libavformat-dev \
-    libavutil-dev \
     libswscale-dev \
     gfortran \
     cython \

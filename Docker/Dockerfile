@@ -1,4 +1,4 @@
-FROM lmoresi/lmoresi-debian-python:1.0.8
+FROM jupyterhub/singleuser:0.9.4
 
 ## =============================================================
 ## base - image ... whatever functionality you want to provide !
@@ -14,23 +14,23 @@ FROM lmoresi/lmoresi-debian-python:1.0.8
 ##
 ## =============================================================
 
+USER root
 
-# ## These break the current installation of lavavu so we simply remove them
-#
-# RUN DEBIAN_FRONTEND=noninteractive apt-get remove -y --no-install-recommends \
-#     libavcodec-dev \
-#     libavformat-dev \
-#     libavutil-dev
-#
-# RUN pip install lavavu
+# RUN apt-get update -y ;
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends --fix-missing \
+        gcc gfortran \
+        && rm -rf /var/lib/apt/lists/*
 
 
-# script for xvfb-run.  all docker commands will effectively run under this via the entrypoint
-# RUN printf "#\041/bin/sh \n rm -f /tmp/.X99-lock && xvfb-run -s '-screen 0 1600x1200x16' \$@" >> /usr/local/bin/xvfbrun.sh && \
-#                     chmod +x /usr/local/bin/xvfbrun.sh
+RUN conda install -y numpy scipy cartopy gdal 
+RUN pip install stripy
 
 
 # RUN useradd --create-home --home-dir /home/jovyan --shell /bin/bash --user-group jovyan || true
+
+RUN addgroup jovyan  || true
+RUN usermod -a -G jovyan jovyan || true
+
 WORKDIR  /home/jovyan
 USER jovyan
 
