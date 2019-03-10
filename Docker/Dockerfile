@@ -16,15 +16,22 @@ FROM jupyterhub/singleuser:0.9.4
 
 USER root
 
-# RUN apt-get update -y ;
+RUN apt-get update -y ;
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends --fix-missing \
         gcc gfortran \
+        libpng-dev \
+        libtiff-dev \
+        libx11-dev \
+        build-essential \
+        libgl1-mesa-dri \
+        libgl1-mesa-glx \
+        freeglut3 \
+        freeglut3-dev \
         && rm -rf /var/lib/apt/lists/*
 
 
-RUN conda install -y numpy scipy cartopy gdal 
-RUN pip install stripy
-
+RUN conda install -y numpy scipy cartopy gdal netcdf4
+RUN pip install stripy lavavu
 
 # RUN useradd --create-home --home-dir /home/jovyan --shell /bin/bash --user-group jovyan || true
 
