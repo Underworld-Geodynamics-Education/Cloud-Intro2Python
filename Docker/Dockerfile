@@ -72,7 +72,7 @@ VOLUME /home/jovyan/Data/Resources
 VOLUME /home/jovyan/build
 
 # expose notebook port and server port
-EXPOSE 8888
+EXPOSE 8888 9999
 
 WORKDIR  /home/jovyan/Notebooks
 
