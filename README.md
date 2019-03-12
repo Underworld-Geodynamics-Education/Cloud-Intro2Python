@@ -2,7 +2,7 @@
 
 Course notes with live examples in a docker environment suitable for use on mybinder.org
 
-[![badge]](https://mybinder.org/v2/gh/University-of-Melbourne-Geodynamics/UoM-VIEPS-Intro-to-Python/master?urlpath=lab/tree/0-StartHere.ipynb)
+[![badge]](https://mybinder.org/v2/gh/University-of-Melbourne-Geodynamics/UoM-VIEPS-Intro-to-Python/binder?urlpath=tree/0-StartHere.ipynb)
 
 
 
