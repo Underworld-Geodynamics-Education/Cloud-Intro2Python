@@ -1,4 +1,7 @@
-FROM lmoresi/docker-vieps-pye:2019.3
+FROM lmoresi/docker-vieps-pye:2019.4
+
+ADD Docker/jupyter_notebook_config-binder.py .jupyter/jupyter_notebook_config.py
+
 
 #
 # ENV NB_USER jovyan

@@ -35,7 +35,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends --
         freeglut3 \
         freeglut3-dev \
         xvfb \
-        && conda install -y numpy scipy cartopy gdal netcdf4 \
+        && conda install -y numpy scipy cartopy gdal netcdf4 obspy \
         && rm -rf /var/lib/apt/lists/*
 
 #
