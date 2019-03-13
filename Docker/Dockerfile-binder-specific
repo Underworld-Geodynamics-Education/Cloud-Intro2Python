@@ -65,7 +65,7 @@ USER jovyan
 ADD --chown=jovyan:jovyan  CourseContent/Data/Reference Data/Reference
 ADD --chown=jovyan:jovyan  CourseContent/Data/Resources Data/Resources
 ADD --chown=jovyan:jovyan  CourseContent/Notebooks Notebooks
-ADD --chown=jovyan:jovyan  Docker/jupyter_notebook_config.py .jupyter/jupyter_notebook_config.py
+ADD --chown=jovyan:jovyan  Docker/jupyter_notebook_config-binder-specific.py .jupyter/jupyter_notebook_config.py
 
 # Persistent / Shared space outside the container
 VOLUME /home/jovyan/Data/Resources
