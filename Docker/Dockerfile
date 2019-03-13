@@ -35,12 +35,14 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends --
         freeglut3 \
         freeglut3-dev \
         xvfb \
+        git \
         && conda install -y numpy scipy cartopy gdal netcdf4 obspy \
         && rm -rf /var/lib/apt/lists/*
 
 #
 
-RUN pip install stripy lavavu
+RUN pip install stripy 
+RUN pip install git+https://github.com/OKaluza/LavaVu.git
 
 # RUN useradd --create-home --home-dir /home/jovyan --shell /bin/bash --user-group jovyan || true
 
