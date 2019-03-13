@@ -40,7 +40,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends --
 
 #
 
-RUN pip install stripy 'lavavu<1.3'
+RUN pip install stripy
+RUN pip install git+https://github.com/OKaluza/LavaVu.git
 
 # RUN useradd --create-home --home-dir /home/jovyan --shell /bin/bash --user-group jovyan || true
 
