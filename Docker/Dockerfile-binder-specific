@@ -41,6 +41,12 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends --
 #
 
 RUN pip install stripy
+
+RUN apt-get update -y ;
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends --fix-missing \
+      git \
+      && rm -rf /var/lib/apt/lists/*
+
 RUN pip install git+https://github.com/OKaluza/LavaVu.git
 
 # RUN useradd --create-home --home-dir /home/jovyan --shell /bin/bash --user-group jovyan || true
