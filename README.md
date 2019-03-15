@@ -2,7 +2,7 @@
 
 Course notes with live examples in a docker environment suitable for use on mybinder.org
 
-[![badge]](https://mybinder.org/v2/gh/University-of-Melbourne-Geodynamics/UoM-VIEPS-Intro-to-Python/binder?urlpath=tree/0-StartHere.ipynb)
+[![badge]](https://mybinder.org/v2/gh/University-of-Melbourne-Geodynamics/UoM-VIEPS-Intro-to-Python/binder?urlpath=lab/tree/0-StartHere.ipynb)
 
 
 
@@ -12,19 +12,19 @@ Course notes with live examples in a docker environment suitable for use on mybi
     - Data:
       - Reference:  sample datasets that are stored locally
       - Resources:  scratch space - ignored by docker
-      
+
     - Notebooks:  jupyter notebooks (course content)
 
     - Private: Notes and Solutions that are not copied into the container
-    
+
     - Assessment: Various assessment tasks that can be copied into the container if required or distributed separately
-    
+
     - pre-2018: material from legacy versions of the course
 
 
 - Docker:  Dockerfiles (standard dockerfile and binder), scripts to build the docker images when there is reason to do this manually, notebook configurations that need to be copied into specific containers
 
-- Dockerfile: a symbolic link to the binder dockerfile in the Docker directory. This link allows 
+- Dockerfile: a symbolic link to the binder dockerfile in the Docker directory. This link allows
 
 
 
