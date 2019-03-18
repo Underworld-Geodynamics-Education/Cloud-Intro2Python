@@ -42,7 +42,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends --
 #
 
 RUN pip install stripy
-RUN pip install git+https://github.com/OKaluza/LavaVu.git
+RUN pip install git+https://github.com/OKaluza/LavaVu.git --user
 
 # RUN useradd --create-home --home-dir /home/jovyan --shell /bin/bash --user-group jovyan || true
 
@@ -60,14 +60,19 @@ RUN printf "#\041/bin/sh \n rm -f /tmp/.X99-lock && xvfb-run -s '-screen 0 1600x
 RUN addgroup jovyan  || true
 RUN usermod -a -G jovyan jovyan || true
 
-WORKDIR  ${HOME}
-USER jovyan
+RUN mkdir -p /home/user_data && chmod +rx /home/user_data
+RUN mkdir -p /home/user_data/PYE && chmod +rx /home/user_data/PYE
+
+WORKDIR  /home/user_data/
 
 ## These are the build templates etc
 ADD --chown=jovyan:jovyan  CourseContent/Data/Reference Data/Reference
 ADD --chown=jovyan:jovyan  CourseContent/Data/Resources Data/Resources
-ADD --chown=jovyan:jovyan  CourseContent/Notebooks Notebooks
-ADD --chown=jovyan:jovyan  Docker/jupyter_notebook_config.py .jupyter/jupyter_notebook_config.py
+ADD --chown=jovyan:jovyan  CourseContent/Notebooks      Notebooks
+
+RUN ln -s /home/jovyan /home/user_data/HOME
+
+USER jovyan
 
 # Persistent / Shared space outside the container
 # VOLUME /home/jovyan/Data/Resources
@@ -76,9 +81,8 @@ ADD --chown=jovyan:jovyan  Docker/jupyter_notebook_config.py .jupyter/jupyter_no
 # expose notebook port and server port
 EXPOSE 8888 9999
 
-WORKDIR  ${HOME}
+WORKDIR  /home/user_data/Notebooks
 
-# ENV no_proxy jupyterhub
 
 # note we use xvfb which to mimic the X display for lavavu
 ENTRYPOINT ["/usr/local/bin/xvfbrun.sh"]

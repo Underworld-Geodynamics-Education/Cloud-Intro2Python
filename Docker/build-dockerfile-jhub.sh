@@ -9,5 +9,5 @@
 set -e
 cd $(dirname "$0")/..
 
-docker build -t lmoresi/docker-vieps-pye:2019.6 -f Docker/Dockerfile  .
+docker build -t lmoresi/docker-vieps-pye-jhub:2019.5i -f Docker/Dockerfile-jhub  .
 # docker build -t lmoresi/docker-vieps-pye-8user:2018.1 -f Docker/Dockerfile8  .
