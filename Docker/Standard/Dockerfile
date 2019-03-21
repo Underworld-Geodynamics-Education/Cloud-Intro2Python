@@ -74,7 +74,7 @@ ADD --chown=jovyan:jovyan  Docker/jupyter_notebook_config.py .jupyter/jupyter_no
 # VOLUME /home/jovyan/build
 
 # expose notebook port and server port
-EXPOSE 8888 9999
+EXPOSE 8888 
 
 WORKDIR  ${HOME}
 
@@ -83,4 +83,4 @@ WORKDIR  ${HOME}
 # note we use xvfb which to mimic the X display for lavavu
 ENTRYPOINT ["/usr/local/bin/xvfbrun.sh"]
 
-CMD ["jupyter", "notebook", "--ip=0.0.0.0","--allow-root", default_url="0-StartHere.ipynb" ]
+CMD ["jupyter", "notebook", "--ip=0.0.0.0","--allow-root", "--NotebookApp.token=''", default_url="0-StartHere.ipynb" ]

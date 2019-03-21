@@ -2,21 +2,11 @@
 _site
 .ipynb_checkpoints
 
-# Site build
 
-www
-www1
-www2
-www3
-www4
-www5
-www6
-www7
-www8
-build
-
-docs/Notebooks
-
-Notebooks/ScatteredData+Triangulation/*.png
-Notebooks/Mapping/*.png
-Notebooks/Mapping/*.jpg
+CourseContent/Notebooks/ScatteredData+Triangulation/*.png
+CourseContent/Notebooks/Mapping/*.png
+CourseContent/Notebooks/Mapping/*.jpg
+CourseContent/Notebooks/SphericalMeshing/SphericalTriangulations/*.png
+CourseContent/Notebooks/SphericalMeshing/CartesianTriangulations/*.png
+CourseContent/Notebooks/SphericalMeshing/Litho1pt0/*.png
+CourseContent/Notebooks/Numpy+Scipy/*png

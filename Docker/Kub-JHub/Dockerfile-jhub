@@ -44,6 +44,13 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends --
 RUN pip install stripy
 RUN pip install git+https://github.com/OKaluza/LavaVu.git --user
 
+RUN addgroup jovyan  || true
+RUN usermod -a -G jovyan jovyan || true
+RUN chown -R jovyan:jovyan /home/jovyan/.local
+
+# Add jupyterlab / jupyterhub integrations
+RUN jupyter labextension install @jupyterlab/hub-extension
+
 # RUN useradd --create-home --home-dir /home/jovyan --shell /bin/bash --user-group jovyan || true
 
 # # Install Tini.. this is required because CMD (below) doesn't play nice with notebooks for some reason: https://github.com/ipython/ipython/issues/7062, https://github.com/jupyter/notebook/issues/334
@@ -57,20 +64,18 @@ RUN printf "#\041/bin/sh \n rm -f /tmp/.X99-lock && xvfb-run -s '-screen 0 1600x
                     chmod +x /usr/local/bin/xvfbrun.sh
 
 
-RUN addgroup jovyan  || true
-RUN usermod -a -G jovyan jovyan || true
 
-RUN mkdir -p /home/user_data && chmod +rx /home/user_data
-RUN mkdir -p /home/user_data/PYE && chmod +rx /home/user_data/PYE
-
+RUN mkdir -p /home/user_data && chmod +rx /home/user_data && chown jovyan:jovyan /home/user_data
 WORKDIR  /home/user_data/
 
 ## These are the build templates etc
 ADD --chown=jovyan:jovyan  CourseContent/Data/Reference Data/Reference
 ADD --chown=jovyan:jovyan  CourseContent/Data/Resources Data/Resources
 ADD --chown=jovyan:jovyan  CourseContent/Notebooks      Notebooks
+ADD --chown=jovyan:jovyan  Docker/Kub-JHub/install_notebooks.py scripts/install_notebooks.py
 
-RUN ln -s /home/jovyan /home/user_data/HOME
+
+# Fix the problems caused by a root level --user install of lavavu
 
 USER jovyan
 
@@ -79,12 +84,16 @@ USER jovyan
 # VOLUME /home/jovyan/build
 
 # expose notebook port and server port
-EXPOSE 8888 9999
+EXPOSE 8888
 
-WORKDIR  /home/user_data/Notebooks
+# This ensures that the notebooks can run in a stand-alone container
+RUN mkdir -p /home/jovyan/PYE_2019
+RUN ln -s /home/user_data/Notebooks /home/jovyan/PYE_2019/Notebooks
+RUN ln -s /home/user_data/Data      /home/jovyan/PYE_2019/Data
+WORKDIR  /home/jovyan/
 
 
 # note we use xvfb which to mimic the X display for lavavu
 ENTRYPOINT ["/usr/local/bin/xvfbrun.sh"]
 
-CMD ["jupyter", "notebook", "--ip=0.0.0.0","--allow-root", default_url="0-StartHere.ipynb" ]
+CMD ["jupyter-lab", "--ip=0.0.0.0","--allow-root", "--NotebookApp.token=''", default_url="/tree/0-StartHere.ipynb" ]

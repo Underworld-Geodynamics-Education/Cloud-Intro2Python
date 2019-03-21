@@ -7,7 +7,6 @@
 
 
 set -e
-cd $(dirname "$0")/..
+cd $(dirname "$0")/../..
 
-docker build -t lmoresi/docker-vieps-pye:2019.6 -f Docker/Dockerfile  .
-# docker build -t lmoresi/docker-vieps-pye-8user:2018.1 -f Docker/Dockerfile8  .
+docker build -t lmoresi/docker-vieps-pye:2019.6 -f Docker/Standard/Dockerfile  .
