@@ -15,6 +15,14 @@ www/*
 build/*
 CourseContent/Data/Resources/*
 CourseContent/pre-2018/*
+CourseContent/Notebooks/ScatteredData+Triangulation/*.png
+CourseContent/Notebooks/Mapping/*.png
+CourseContent/Notebooks/Mapping/*.jpg
+CourseContent/Notebooks/SphericalMeshing/SphericalTriangulations/*.png
+CourseContent/Notebooks/SphericalMeshing/CartesianTriangulations/*.png
+CourseContent/Notebooks/SphericalMeshing/Litho1pt0/*.png
+CourseContent/Notebooks/Numpy+Scipy/*png
+
 #  Git
 
 .git
