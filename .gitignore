@@ -10,3 +10,6 @@ CourseContent/Notebooks/SphericalMeshing/SphericalTriangulations/*.png
 CourseContent/Notebooks/SphericalMeshing/CartesianTriangulations/*.png
 CourseContent/Notebooks/SphericalMeshing/Litho1pt0/*.png
 CourseContent/Notebooks/Numpy+Scipy/*png
+
+# In case this one gets cloned by mistake
+CourseContent/Notebooks/Introduction2VersionControl/shared-sandbox
