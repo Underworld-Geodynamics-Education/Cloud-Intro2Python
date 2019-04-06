@@ -9,4 +9,4 @@
 set -e
 cd $(dirname "$0")/../..
 
-docker build -t lmoresi/docker-vieps-pye:2019.6 -f Docker/Standard/Dockerfile  .
+docker build -t lmoresi/docker-vieps-pye:2019.04.05 -f Docker/Standard/Dockerfile  .
