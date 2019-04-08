@@ -104,4 +104,5 @@ WORKDIR  /home/jovyan/
 # note we use xvfb which to mimic the X display for lavavu
 ENTRYPOINT ["/usr/local/bin/xvfbrun.sh"]
 
-CMD ["jupyter-lab", "--ip=0.0.0.0","--allow-root", "--NotebookApp.token=''", default_url="/tree/0-StartHere.ipynb" ]
+CMD ["jupyter", "lab", "--ip=0.0.0.0","--allow-root", "--NotebookApp.token=''"]
+#    , "default_url=/tree/0-StartHere.ipynb" ]
