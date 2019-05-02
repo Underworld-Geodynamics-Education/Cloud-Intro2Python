@@ -9,4 +9,4 @@
 set -e
 cd $(dirname "$0")/../..
 
-docker build -t lmoresi/docker-vieps-pye-jhub:2019.04.09 -f Docker/Kub-JHub/Dockerfile-jhub  .
+docker build -t lmoresi/docker-vieps-pye-jhub:2019.04.12  -f Docker/Kub-JHub/Dockerfile-jhub  .
