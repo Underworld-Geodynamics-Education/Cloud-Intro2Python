@@ -3,13 +3,14 @@ _site
 .ipynb_checkpoints
 
 
-CourseContent/Notebooks/ScatteredData+Triangulation/*.png
-CourseContent/Notebooks/Mapping/*.png
-CourseContent/Notebooks/Mapping/*.jpg
-CourseContent/Notebooks/SphericalMeshing/SphericalTriangulations/*.png
-CourseContent/Notebooks/SphericalMeshing/CartesianTriangulations/*.png
-CourseContent/Notebooks/SphericalMeshing/Litho1pt0/*.png
-CourseContent/Notebooks/Numpy+Scipy/*png
+0_Intro2Python/Notebooks/ScatteredData+Triangulation/*.png
+0_Intro2Python/Notebooks/Mapping/*.png
+0_Intro2Python/Notebooks/Mapping/*.jpg
+0_Intro2Python/Notebooks/SphericalMeshing/SphericalTriangulations/*.png
+0_Intro2Python/Notebooks/SphericalMeshing/CartesianTriangulations/*.png
+0_Intro2Python/Notebooks/SphericalMeshing/Litho1pt0/*.png
+0_Intro2Python/Notebooks/Numpy+Scipy/*png
 
 # In case this one gets cloned by mistake
-CourseContent/Notebooks/Introduction2VersionControl/shared-sandbox
+
+OldCourseContent/Notebooks/Introduction2VersionControl/shared-sandbox

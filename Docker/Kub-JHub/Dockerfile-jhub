@@ -38,7 +38,7 @@ RUN jupyter-labextension enable @jupyterlab/google-drive
 RUN jupyter-serverextension enable --py jupyterlab_git
 
 ADD --chown=jovyan:jovyan  0_Intro2Python  Intro2Python
-ADD --chown=jovyan:jovyan  1_UserContent        .UserContent
+ADD --chown=jovyan:jovyan  1_UserContent   .UserContent
 ADD --chown=jovyan:jovyan  Docker/Kub-JHub/install_user_files.py scripts/install_user_files.py
 ADD --chown=jovyan:jovyan  Docker/Kub-JHub/@jupyterlab  configs/@jupyterlab
 
