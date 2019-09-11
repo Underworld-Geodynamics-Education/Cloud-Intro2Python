@@ -49,3 +49,7 @@ RUN pip3 install stripy litho1pt0 --upgrade
 RUN pip3 install lavavu --upgrade
 RUN pip3 install imageio
 RUN pip3 install cloudstor
+
+
+USER jovyan
+WORKDIR  /home/jovyan
