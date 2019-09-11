@@ -7,5 +7,7 @@ description:  Underworld Geodynamics Group Introduction to Python (Image include
 landing_place: lab/tree/LandingPage.md
 
 ## This is entirely FYI - the uw-cloud url
-launch_url_dev:  http://developer.cloud.underworldcode.org/user-redirect/lab?gh_repo=Underworld-Geodynamics-Education/Cloud-Intro2Python&gh_path=CourseContent
-launch_url:           http://user.cloud.underworldcode.org/user-redirect/lab?gh_repo=Underworld-Geodynamics-Education/Cloud-Intro2Python&gh_path=CourseContent
+launch_url_dev:  |
+  http://developer.cloud.underworldcode.org/user-redirect/lab?gh_repo=Underworld-Geodynamics-Education/Cloud-Intro2Python&gh_path=CourseContent
+launch_url:  |
+  http://user.cloud.underworldcode.org/user-redirect/lab?gh_repo=Underworld-Geodynamics-Education/Cloud-Intro2Python&gh_path=CourseContent
