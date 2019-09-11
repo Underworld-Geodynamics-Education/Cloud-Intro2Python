@@ -9,4 +9,4 @@
 # set -e
 # cd $(dirname "$0")/.
 
-docker build -t lmoresi/docker-cloud-python:2019.09.11 -f Dockerfile  .
+docker build -t lmoresi/docker-cloud-python:2019.09.11i -f Dockerfile  .
