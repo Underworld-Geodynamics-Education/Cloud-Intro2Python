@@ -22,7 +22,6 @@ USER root
 # lavavu: libgl*mesa*, libpng-dev, libtiff-dev, libx11-dev
 # lavavu: freeglut*, xvfb
 
-
 RUN apt-get update -y ;
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends --fix-missing \
         gcc gfortran \
