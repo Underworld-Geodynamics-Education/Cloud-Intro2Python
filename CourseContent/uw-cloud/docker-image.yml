@@ -1,0 +1,11 @@
+## The image name is the docker hub location / tag
+imagename:  lmoresi/docker-cloud-python:2019.09.11
+
+## The description is a string that may be auto-read and displayed to a user who is browsing for images
+description:  Underworld Geodynamics Group Introduction to Python (Image includes cartopy, numpy etc)
+
+landing_place: lab/tree/LandingPage.md
+
+## This is entirely FYI - the uw-cloud url
+launch_url_dev:  http://developer.cloud.underworldcode.org/user-redirect/lab?gh_repo=Underworld-Geodynamics-Education/Cloud-Intro2Python&gh_path=CourseContent
+launch_url:           http://user.cloud.underworldcode.org/user-redirect/lab?gh_repo=Underworld-Geodynamics-Education/Cloud-Intro2Python&gh_path=CourseContent
